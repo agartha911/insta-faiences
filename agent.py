@@ -127,8 +127,8 @@ def pick_product(items, state):
 
 
 def fetch_image(p):
-    if p.get("image_id"):
-        url = CATALOG["image_base"] + p["image_id"] + ".jpg"
+    if p.get("asset") or p.get("image_id"):
+        url = CATALOG["image_base"] + (p.get("asset") or p["image_id"] + ".jpg")
         r = requests.get(url, headers=UA, timeout=60)
         r.raise_for_status()
         data = r.content
@@ -182,7 +182,7 @@ def image_prompt(p, ad):
 PIÈCE (référence = photo fournie) : {p.get('look', p['name'])}.
 RÈGLE ABSOLUE : la pièce doit rester strictement identique à la photo — même forme, mêmes proportions, même couleur d'émail, même motif peint (nombre, taille et position des motifs), même texture artisanale. Tu peux seulement changer l'angle de vue, la lumière et l'environnement. Ne rajoute aucun logo ni texte sur la pièce.
 
-DÉCOR : {ad['scene']}. Les couleurs du décor reprennent et mettent en valeur celles de la pièce ({p.get('palette', '')}).
+DÉCOR : {ad['scene']}. Les couleurs du décor reprennent et mettent en valeur celles de la pièce{(' (' + p['palette'] + ')') if p.get('palette') else ''}.
 CADRAGE : {ad['angle']}. La pièce est le sujet principal, nette, composition éditoriale (règle des tiers), arrière-plan en faible profondeur de champ.
 LUMIÈRE : {ad['light']}. Ombres de contact et occlusion ambiante réalistes, reflets naturels sur l'émail, la pièce parfaitement intégrée à la scène (même lumière, même température de couleur).
 RENDU : vraie photo (pas d'aspect 3D ni illustration), étalonnage élégant et artisanal. Format vertical, aucun texte, aucun filigrane."""

@@ -1,111 +1,843 @@
 {
-  "_note": "Catalogue de secours. L'agent essaie d'abord de lire le site ; si le site est inaccessible ou si un produit n'y est plus, il utilise cette liste. 'image' = URL ou chemin local dans le dépôt.",
-  "image_base": "https://cdn.zyrosite.com/cdn-cgi/image/format=jpeg,w=1600,q=95/cdn-ecommerce/store_01J1WT0BD3M89F9FP617ZP73KP/assets/",
-  "products": [
-    {"slug": "tasse-calypso-", "name": "Tasse Calypso", "price": "25 €", "image_id": "9846639e-3a8d-4106-a20f-71cd2c492bd6",
-     "look": "tasse ronde en faïence blanc cassé peinte à la main de petites fleurs rouges à cœur blanc, anse et pied rouge vif",
-     "palette": "crème, rouge coquelicot, rose poudré",
-     "scenes": ["A: table de petit-déjeuner d'été, nappe en lin crème, fraises et framboises fraîches, quelques coquelicots dans un petit vase flou à l'arrière, lumière dorée du matin",
-                "B: style méditerranéen, mur enduit à la chaux rose pâle, ombre de feuillage portée, plateau en bois clair"]},
-    {"slug": "bol-calypso", "name": "Bol Calypso", "price": "28 €", "image_id": "c35cfc91-da81-41b9-a157-4bbe7df81864",
-     "look": "bol à oreilles en faïence blanc cassé à fleurs rouges peintes à la main, oreilles et pied rouges",
-     "palette": "crème, rouge, terracotta",
-     "scenes": ["A: bol rempli de granola et de fraises sur un plan de travail en bois clair, cuillère en bois, torchon à carreaux rouges flou",
-                "B: cuisine provençale, carreaux de ciment, lumière de fin d'après-midi"]},
-    {"slug": "assiette-creuse-calypso-", "name": "Assiette creuse Calypso", "price": "30 €", "image_id": "b040f370-c7bd-49a9-be98-987db972284b",
-     "look": "assiette creuse en faïence crème à fleurs rouges peintes, bord rouge",
-     "palette": "crème, rouge, vert tomate",
-     "scenes": ["A: assiette de pâtes à la tomate et basilic frais sur une table en bois, verre de vin rouge flou",
-                "B: vue plongeante sur nappe en lin, cerises éparpillées, lumière naturelle douce"]},
-    {"slug": "tasse-fjord", "name": "Tasse Fjord", "price": "25 €", "image_id": "e1d7bcbc-ea21-43d9-9aed-4649d43b5d6e",
-     "look": "mug cannelé en grès émaillé bleu nuit profond avec reflets bruns sur les arêtes",
-     "palette": "bleu nuit, bleu glacier, brun",
-     "scenes": ["A: rocher sombre mouillé au bord d'un lac nordique, eau calme bleutée, brume légère, vapeur de café",
-                "B: intérieur scandinave, table en chêne, laine grise, lumière d'hiver froide par la fenêtre"]},
-    {"slug": "bol-fjord", "name": "Bol Fjord", "price": "28 €", "image_id": "dbd2d276-9579-47f6-844e-75244042bb63",
-     "look": "bol à oreilles cannelé en grès émaillé bleu nuit à reflets bruns",
-     "palette": "bleu nuit, ardoise, bois",
-     "scenes": ["A: bol de soupe fumante sur table en bois brut, pain de campagne, ambiance chalet",
-                "B: ardoise sombre, myrtilles et mûres, lumière latérale dramatique"]},
-    {"slug": "assiette-creuse-fjord", "name": "Assiette creuse Fjord", "price": "30 €", "image_id": "7caa3405-b403-4efb-8517-fce2e0399c2b",
-     "look": "assiette creuse profonde cannelée en grès bleu nuit, intérieur bleu brillant",
-     "palette": "bleu profond, gris pierre",
-     "scenes": ["A: posée sur une pierre plate au bord de l'eau, galets, reflets bleus",
-                "B: table de chef, risotto, lin gris, lumière tamisée"]},
-    {"slug": "bol-petits-pois", "name": "Bol Petits pois", "price": "28 €", "image_id": "f3685527-6c36-42e2-9404-d09a707cc0f6",
-     "look": "bol à oreilles en faïence blanche à pois turquoise peints à la main",
-     "palette": "blanc, turquoise, menthe",
-     "scenes": ["A: bol de porridge, myrtilles et menthe sur table en bois blanchi, lumière du matin",
-                "B: bord de mer, nappe rayée, lumière vive estivale"]},
-    {"slug": "assiette-creuse-petits-pois", "name": "Assiette creuse Petits pois", "price": "30 €", "image_id": "f5bc405f-6994-48c0-add9-64ce6cad10ed",
-     "look": "assiette creuse blanche à pois turquoise peints à la main",
-     "palette": "blanc, turquoise, vert",
-     "scenes": ["A: salade fraîche de petits pois et feta, menthe, table en lin vert d'eau",
-                "B: pique-nique dans l'herbe, nappe vichy, lumière douce"]},
-    {"slug": "tasse-petits-pois", "name": "Tasse Petits pois", "price": "25 €", "image_id": "128dc9dd-a7b5-4d91-9b19-106a66e79b7e",
-     "look": "tasse ronde en faïence blanche à pois turquoise peints à la main",
-     "palette": "blanc, turquoise, bois clair",
-     "scenes": ["A: thé à la menthe fumant, livre ouvert, plaid crème, coin fenêtre",
-                "B: style wabi-sabi, table en bois brut, branche d'eucalyptus"]},
-    {"slug": "huilier-en-ceramique1", "name": "Huilier en céramique (bleu)", "price": "30 €", "image_id": "0a79cb85-b8df-434d-a7ec-af644ef9fb5c",
-     "look": "huilier en céramique bleu profond à émail réactif, motif sculpté, bec verseur en inox",
-     "palette": "bleu profond, olive, doré",
-     "scenes": ["A: cuisine méditerranéenne, planche en olivier, tomates cerises, pain, olives, lumière du soir",
-                "B: comptoir en marbre, citrons, branche d'olivier"]},
-    {"slug": "huilier-en-ceramique", "name": "Huilier en céramique (céladon)", "price": "30 €", "image_id": "5a7a6eab-853e-42b9-9542-149783466322",
-     "look": "huilier en céramique vert céladon pâle à décor imprimé, bec verseur en inox",
-     "palette": "céladon, vert sauge, blanc",
-     "scenes": ["A: plan de travail clair, herbes fraîches (romarin, thym), citron coupé, lumière naturelle",
-                "B: jardin, table en fer forgé, feuillage en arrière-plan flou"]},
-    {"slug": "beurrier-a-eau-", "name": "Beurrier à eau", "price": "40 €", "image_id": "644c3a1d-3c04-4f9e-a245-25cff9103421",
-     "look": "beurrier à eau breton en céramique, couvercle bleu-vert, corps à motif de points sculptés brun et turquoise",
-     "palette": "bleu-vert, brun, crème",
-     "scenes": ["A: petit-déjeuner à la ferme, pain de campagne tranché, beurre, confiture, couteau en bois",
-                "B: buffet ancien en bois, torchon en lin, lumière de cuisine"]},
-    {"slug": "support-a-eponge", "name": "Support à éponge (rose fleuri)", "price": "25 €", "image_id": "609242b3-ae79-43a1-9ad3-261f1a145128",
-     "look": "support à éponge en céramique rose poudré à fleurs en relief, petit bec d'écoulement",
-     "palette": "rose poudré, blanc, laiton",
-     "scenes": ["A: bord d'évier en zellige rose, robinet laiton, plante verte",
-                "B: cuisine bohème, savon artisanal, lumière douce"]},
-    {"slug": "support-a-eponge1", "name": "Support à éponge (bleu cannelé)", "price": "25 €", "image_id": "e7ca3583-646a-47ae-8b94-8fe2c7a633f4",
-     "look": "support à éponge cannelé gris-bleu, petit bec d'écoulement",
-     "palette": "gris-bleu, blanc, inox",
-     "scenes": ["A: bord d'évier en carrelage métro blanc, brosse en bois",
-                "B: plan en pierre bleue, savon noir, lumière froide"]},
-    {"slug": "support-a-eponge2", "name": "Support à éponge (ardoise)", "price": "25 €", "image_id": "52e250a0-5abc-42bb-891a-c3b0d0e7b740",
-     "look": "support à éponge gris ardoise texturé de petits points, bec d'écoulement",
-     "palette": "ardoise, noir, bois",
-     "scenes": ["A: évier en pierre noire, plan en bois foncé, ambiance moody",
-                "B: cuisine industrielle, béton ciré, plante"]},
-    {"slug": "support-a-eponge3", "name": "Support à éponge (vert feuillage)", "price": "25 €", "image_id": "dea1d899-4120-43a8-b438-d3f6088513e5",
-     "look": "support à éponge vert émeraude brillant à feuillages en relief, bec d'écoulement",
-     "palette": "vert émeraude, vert sauge, bois",
-     "scenes": ["A: bord d'évier avec plantes vertes et herbes aromatiques en pot",
-                "B: carrelage vert bouteille, lumière de jardin"]},
-    {"slug": "tasse-a-expresso", "name": "Tasse à expresso (vert bronze)", "price": "15 €", "image_id": "33717c6f-a324-4fc9-afb2-4e43fe6aebfb",
-     "look": "petite tasse à expresso sans anse, émail réactif vert bronze et brun",
-     "palette": "vert bronze, brun, crème",
-     "scenes": ["A: expresso avec crema, grains de café éparpillés sur bois sombre, lumière rasante",
-                "B: comptoir de café en marbre, sucre roux"]},
-    {"slug": "tasse-a-expresso1", "name": "Tasse à expresso (noir cannelé)", "price": "15 €", "image_id": "60eec168-a01a-4dea-918b-7ab0db62874f",
-     "look": "tasse à expresso cannelée noir bleuté avec anse",
-     "palette": "noir, bleu nuit, laiton",
-     "scenes": ["A: expresso noir, carré de chocolat noir, fond sombre élégant",
-                "B: matin de bureau, carnet en cuir, lumière d'aube"]},
-    {"slug": "tasse-a-expresso2", "name": "Tasse à expresso (rouille)", "price": "15 €", "image_id": "c1d76602-362a-4640-90cb-9817edec8be1",
-     "look": "tasse à expresso brun rouille brillant, anse carrée",
-     "palette": "rouille, cannelle, terre cuite",
-     "scenes": ["A: automne, feuilles rousses, bâton de cannelle, plaid",
-                "B: mur en terre cuite, soleil couchant"]},
-    {"slug": "tasse-a-expresso3", "name": "Tasse à expresso (gris bleuté)", "price": "15 €", "image_id": "29756f43-4fbb-4830-b43f-4b3364185b69",
-     "look": "petite tasse sans anse en grès gris bleuté moucheté avec coulures bleues",
-     "palette": "gris bleuté, bleu, sable",
-     "scenes": ["A: wabi-sabi japonais, thé vert, natte en bambou, pierre",
-                "B: bord de mer, sable et coquillages, lumière blanche"]},
-    {"slug": "bol-lavande-fleurs-bleues", "name": "Bol lavande à fleurs bleues", "price": "", "image": "assets/extra/bol-lavande-fleurs-bleues.jpg",
-     "look": "bol bas en faïence lavande peint à la main de fleurs bleu cobalt à cœur noir, dedans et dehors",
-     "palette": "lavande, bleu cobalt, bois miel",
-     "scenes": ["A: plan de travail en bois clair huilé, myrtilles et figues violettes, branche de romarin, torchon en lin beige",
-                "B: champ de lavande provençal flou en arrière-plan, table en bois, lumière dorée"]}
-  ]
+ "_note": "Catalogue complet de la boutique (85 pièces relevées le 08/11/2026) + pièces hors site. 'asset' = nom du fichier image sur le CDN du site ; 'image' = chemin local dans le dépôt.",
+ "image_base": "https://cdn.zyrosite.com/cdn-cgi/image/format=jpeg,w=1600,q=95/cdn-ecommerce/store_01J1WT0BD3M89F9FP617ZP73KP/assets/",
+ "products": [
+  {
+   "slug": "tasse-a-expresso3",
+   "name": "Tasse à expresso (gris bleuté)",
+   "price": "15 €",
+   "look": "petite tasse sans anse en grès gris bleuté moucheté avec coulures bleues",
+   "palette": "gris bleuté, bleu, sable",
+   "scenes": [
+    "A: wabi-sabi japonais, thé vert, natte en bambou, pierre",
+    "B: bord de mer, sable et coquillages, lumière blanche"
+   ],
+   "asset": "29756f43-4fbb-4830-b43f-4b3364185b69.jpg"
+  },
+  {
+   "slug": "tasse-a-expresso2",
+   "name": "Tasse à expresso (rouille)",
+   "price": "15 €",
+   "look": "tasse à expresso brun rouille brillant, anse carrée",
+   "palette": "rouille, cannelle, terre cuite",
+   "scenes": [
+    "A: automne, feuilles rousses, bâton de cannelle, plaid",
+    "B: mur en terre cuite, soleil couchant"
+   ],
+   "asset": "c1d76602-362a-4640-90cb-9817edec8be1.jpg"
+  },
+  {
+   "slug": "tasse-a-expresso1",
+   "name": "Tasse à expresso (noir cannelé)",
+   "price": "15 €",
+   "look": "tasse à expresso cannelée noir bleuté avec anse",
+   "palette": "noir, bleu nuit, laiton",
+   "scenes": [
+    "A: expresso noir, carré de chocolat noir, fond sombre élégant",
+    "B: matin de bureau, carnet en cuir, lumière d'aube"
+   ],
+   "asset": "60eec168-a01a-4dea-918b-7ab0db62874f.jpg"
+  },
+  {
+   "slug": "tasse-a-expresso",
+   "name": "Tasse à expresso (vert bronze)",
+   "price": "15 €",
+   "look": "petite tasse à expresso sans anse, émail réactif vert bronze et brun",
+   "palette": "vert bronze, brun, crème",
+   "scenes": [
+    "A: expresso avec crema, grains de café éparpillés sur bois sombre, lumière rasante",
+    "B: comptoir de café en marbre, sucre roux"
+   ],
+   "asset": "33717c6f-a324-4fc9-afb2-4e43fe6aebfb.jpg"
+  },
+  {
+   "slug": "support-a-eponge3",
+   "name": "Support à éponge (vert feuillage)",
+   "price": "25 €",
+   "look": "support à éponge vert émeraude brillant à feuillages en relief, bec d'écoulement",
+   "palette": "vert émeraude, vert sauge, bois",
+   "scenes": [
+    "A: bord d'évier avec plantes vertes et herbes aromatiques en pot",
+    "B: carrelage vert bouteille, lumière de jardin"
+   ],
+   "asset": "dea1d899-4120-43a8-b438-d3f6088513e5.jpg"
+  },
+  {
+   "slug": "support-a-eponge2",
+   "name": "Support à éponge (ardoise)",
+   "price": "25 €",
+   "look": "support à éponge gris ardoise texturé de petits points, bec d'écoulement",
+   "palette": "ardoise, noir, bois",
+   "scenes": [
+    "A: évier en pierre noire, plan en bois foncé, ambiance moody",
+    "B: cuisine industrielle, béton ciré, plante"
+   ],
+   "asset": "52e250a0-5abc-42bb-891a-c3b0d0e7b740.jpg"
+  },
+  {
+   "slug": "support-a-eponge1",
+   "name": "Support à éponge (bleu cannelé)",
+   "price": "25 €",
+   "look": "support à éponge cannelé gris-bleu, petit bec d'écoulement",
+   "palette": "gris-bleu, blanc, inox",
+   "scenes": [
+    "A: bord d'évier en carrelage métro blanc, brosse en bois",
+    "B: plan en pierre bleue, savon noir, lumière froide"
+   ],
+   "asset": "e7ca3583-646a-47ae-8b94-8fe2c7a633f4.jpg"
+  },
+  {
+   "slug": "support-a-eponge",
+   "name": "Support à éponge (rose fleuri)",
+   "price": "25 €",
+   "look": "support à éponge en céramique rose poudré à fleurs en relief, petit bec d'écoulement",
+   "palette": "rose poudré, blanc, laiton",
+   "scenes": [
+    "A: bord d'évier en zellige rose, robinet laiton, plante verte",
+    "B: cuisine bohème, savon artisanal, lumière douce"
+   ],
+   "asset": "609242b3-ae79-43a1-9ad3-261f1a145128.jpg"
+  },
+  {
+   "slug": "huilier-en-ceramique1",
+   "name": "Huilier en céramique (bleu)",
+   "price": "30 €",
+   "look": "huilier en céramique bleu profond à émail réactif, motif sculpté, bec verseur en inox",
+   "palette": "bleu profond, olive, doré",
+   "scenes": [
+    "A: cuisine méditerranéenne, planche en olivier, tomates cerises, pain, olives, lumière du soir",
+    "B: comptoir en marbre, citrons, branche d'olivier"
+   ],
+   "asset": "0a79cb85-b8df-434d-a7ec-af644ef9fb5c.jpg"
+  },
+  {
+   "slug": "huilier-en-ceramique",
+   "name": "Huilier en céramique (céladon)",
+   "price": "30 €",
+   "look": "huilier en céramique vert céladon pâle à décor imprimé, bec verseur en inox",
+   "palette": "céladon, vert sauge, blanc",
+   "scenes": [
+    "A: plan de travail clair, herbes fraîches (romarin, thym), citron coupé, lumière naturelle",
+    "B: jardin, table en fer forgé, feuillage en arrière-plan flou"
+   ],
+   "asset": "5a7a6eab-853e-42b9-9542-149783466322.jpg"
+  },
+  {
+   "slug": "beurrier-a-eau-",
+   "name": "Beurrier à eau",
+   "price": "40 €",
+   "look": "beurrier à eau breton en céramique, couvercle bleu-vert, corps à motif de points sculptés brun et turquoise",
+   "palette": "bleu-vert, brun, crème",
+   "scenes": [
+    "A: petit-déjeuner à la ferme, pain de campagne tranché, beurre, confiture, couteau en bois",
+    "B: buffet ancien en bois, torchon en lin, lumière de cuisine"
+   ],
+   "asset": "644c3a1d-3c04-4f9e-a245-25cff9103421.jpg"
+  },
+  {
+   "slug": "bol-petits-pois",
+   "name": "Bol Petits pois",
+   "price": "28 €",
+   "look": "bol à oreilles en faïence blanche à pois turquoise peints à la main",
+   "palette": "blanc, turquoise, menthe",
+   "scenes": [
+    "A: bol de porridge, myrtilles et menthe sur table en bois blanchi, lumière du matin",
+    "B: bord de mer, nappe rayée, lumière vive estivale"
+   ],
+   "asset": "f3685527-6c36-42e2-9404-d09a707cc0f6.jpg"
+  },
+  {
+   "slug": "assiette-creuse-petits-pois",
+   "name": "Assiette creuse Petits pois",
+   "price": "30 €",
+   "look": "assiette creuse blanche à pois turquoise peints à la main",
+   "palette": "blanc, turquoise, vert",
+   "scenes": [
+    "A: salade fraîche de petits pois et feta, menthe, table en lin vert d'eau",
+    "B: pique-nique dans l'herbe, nappe vichy, lumière douce"
+   ],
+   "asset": "f5bc405f-6994-48c0-add9-64ce6cad10ed.jpg"
+  },
+  {
+   "slug": "tasse-petits-pois",
+   "name": "Tasse Petits pois",
+   "price": "25 €",
+   "look": "tasse ronde en faïence blanche à pois turquoise peints à la main",
+   "palette": "blanc, turquoise, bois clair",
+   "scenes": [
+    "A: thé à la menthe fumant, livre ouvert, plaid crème, coin fenêtre",
+    "B: style wabi-sabi, table en bois brut, branche d'eucalyptus"
+   ],
+   "asset": "128dc9dd-a7b5-4d91-9b19-106a66e79b7e.jpg"
+  },
+  {
+   "slug": "tasse-calypso-",
+   "name": "Tasse Calypso",
+   "price": "25 €",
+   "look": "tasse ronde en faïence blanc cassé peinte à la main de petites fleurs rouges à cœur blanc, anse et pied rouge vif",
+   "palette": "crème, rouge coquelicot, rose poudré",
+   "scenes": [
+    "A: table de petit-déjeuner d'été, nappe en lin crème, fraises et framboises fraîches, quelques coquelicots dans un petit vase flou à l'arrière, lumière dorée du matin",
+    "B: style méditerranéen, mur enduit à la chaux rose pâle, ombre de feuillage portée, plateau en bois clair"
+   ],
+   "asset": "9846639e-3a8d-4106-a20f-71cd2c492bd6.jpg"
+  },
+  {
+   "slug": "assiette-creuse-calypso-",
+   "name": "Assiette creuse Calypso",
+   "price": "30 €",
+   "look": "assiette creuse en faïence crème à fleurs rouges peintes, bord rouge",
+   "palette": "crème, rouge, vert tomate",
+   "scenes": [
+    "A: assiette de pâtes à la tomate et basilic frais sur une table en bois, verre de vin rouge flou",
+    "B: vue plongeante sur nappe en lin, cerises éparpillées, lumière naturelle douce"
+   ],
+   "asset": "b040f370-c7bd-49a9-be98-987db972284b.jpg"
+  },
+  {
+   "slug": "bol-calypso",
+   "name": "Bol Calypso",
+   "price": "28 €",
+   "look": "bol à oreilles en faïence blanc cassé à fleurs rouges peintes à la main, oreilles et pied rouges",
+   "palette": "crème, rouge, terracotta",
+   "scenes": [
+    "A: bol rempli de granola et de fraises sur un plan de travail en bois clair, cuillère en bois, torchon à carreaux rouges flou",
+    "B: cuisine provençale, carreaux de ciment, lumière de fin d'après-midi"
+   ],
+   "asset": "c35cfc91-da81-41b9-a157-4bbe7df81864.jpg"
+  },
+  {
+   "slug": "bol-fjord",
+   "name": "Bol Fjord",
+   "price": "28 €",
+   "look": "bol à oreilles cannelé en grès émaillé bleu nuit à reflets bruns",
+   "palette": "bleu nuit, ardoise, bois",
+   "scenes": [
+    "A: bol de soupe fumante sur table en bois brut, pain de campagne, ambiance chalet",
+    "B: ardoise sombre, myrtilles et mûres, lumière latérale dramatique"
+   ],
+   "asset": "dbd2d276-9579-47f6-844e-75244042bb63.jpg"
+  },
+  {
+   "slug": "assiette-creuse-fjord",
+   "name": "Assiette creuse Fjord",
+   "price": "30 €",
+   "look": "assiette creuse profonde cannelée en grès bleu nuit, intérieur bleu brillant",
+   "palette": "bleu profond, gris pierre",
+   "scenes": [
+    "A: posée sur une pierre plate au bord de l'eau, galets, reflets bleus",
+    "B: table de chef, risotto, lin gris, lumière tamisée"
+   ],
+   "asset": "7caa3405-b403-4efb-8517-fce2e0399c2b.jpg"
+  },
+  {
+   "slug": "tasse-fjord",
+   "name": "Tasse Fjord",
+   "price": "25 €",
+   "look": "mug cannelé en grès émaillé bleu nuit profond avec reflets bruns sur les arêtes",
+   "palette": "bleu nuit, bleu glacier, brun",
+   "scenes": [
+    "A: rocher sombre mouillé au bord d'un lac nordique, eau calme bleutée, brume légère, vapeur de café",
+    "B: intérieur scandinave, table en chêne, laine grise, lumière d'hiver froide par la fenêtre"
+   ],
+   "asset": "e1d7bcbc-ea21-43d9-9aed-4649d43b5d6e.jpg"
+  },
+  {
+   "slug": "tasse-roses",
+   "name": "Tasse Roses",
+   "look": "Tasse Roses : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "bda22d06-1fe5-4d8c-8c12-abe2201acbb1.jpg"
+  },
+  {
+   "slug": "tasse-amour-coeurs-rose",
+   "name": "Tasse Amour Cœurs Rose",
+   "look": "Tasse Amour Cœurs Rose : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "6e2aed1e-0fc3-4ce7-a7d3-5d455ded5140.jpg"
+  },
+  {
+   "slug": "tasse-ocean",
+   "name": "Tasse Océan",
+   "look": "Tasse Océan : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "70772897-21ec-48d8-b1d3-c0507a6b06c6.jpg"
+  },
+  {
+   "slug": "fleur-tulipe",
+   "name": "Fleur en céramique Tulipe",
+   "look": "Fleur en céramique Tulipe : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "7 €",
+   "asset": "164d570b-d255-4c2d-b221-e00cde90cc2c.jpg"
+  },
+  {
+   "slug": "fleur-rose1",
+   "name": "Fleur en céramique Rose",
+   "look": "Fleur en céramique Rose : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "dd7d5f15-19ef-4a6e-b029-e7ac40f127b7.jpg"
+  },
+  {
+   "slug": "fleur-jonquille",
+   "name": "Fleur en céramique Jonquille",
+   "look": "Fleur en céramique Jonquille : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "7 €",
+   "asset": "e091da91-4fb9-4649-b72b-125490983577.jpg"
+  },
+  {
+   "slug": "fleur-bi-color",
+   "name": "Fleur en céramique Bi Color",
+   "look": "Fleur en céramique Bi Color : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "9b88ab77-6869-4971-bf65-63a56f8c98a3.jpg"
+  },
+  {
+   "slug": "fleur-bleu",
+   "name": "Fleur en céramique Bleu",
+   "look": "Fleur en céramique Bleu : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "7 €",
+   "asset": "0ab01c00-43f7-4581-a17e-549c71dbc93f.jpg"
+  },
+  {
+   "slug": "fleur-arome",
+   "name": "Fleur en céramique Arome",
+   "look": "Fleur en céramique Arome : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "7 €",
+   "asset": "579c7a0a-9edf-48bb-b1f1-276ed802a443.jpg"
+  },
+  {
+   "slug": "fleur-bleu-mouchete-et-blanc",
+   "name": "Fleur en céramique Bleu Moucheté Et Blanc",
+   "look": "Fleur en céramique Bleu Moucheté Et Blanc : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "6d59f87e-202b-4bc2-8e54-400d6d76ce5d.jpg"
+  },
+  {
+   "slug": "fleur-rose-et-blanche",
+   "name": "Fleur en céramique Rose Et Blanche",
+   "look": "Fleur en céramique Rose Et Blanche : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "681164d3-f47f-44a7-a6c4-4dec92537d70.jpg"
+  },
+  {
+   "slug": "coeur-en-ceramique-3",
+   "name": "Cœur en céramique",
+   "look": "Cœur en céramique : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "38 €",
+   "asset": "577dcce6-549c-40c4-8ecb-f9821ad06130.jpg"
+  },
+  {
+   "slug": "coeur-en-ceramique-",
+   "name": "Cœur en céramique",
+   "look": "Cœur en céramique : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "38 €",
+   "asset": "604c2025-d0ac-4d67-885d-5d9c414fdb41.jpg"
+  },
+  {
+   "slug": "fleur-blanche",
+   "name": "Fleur en céramique Marguerite",
+   "look": "Fleur en céramique Marguerite : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "996aa9c7-ba07-4504-a714-9176528e3556.jpg"
+  },
+  {
+   "slug": "fleur-orange-",
+   "name": "Fleur en céramique Orange",
+   "look": "Fleur en céramique Orange : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "bd4a886b-90b3-4198-a6bf-457fac9ffeaa.jpg"
+  },
+  {
+   "slug": "fleur-violette-",
+   "name": "Fleur en céramique Violette",
+   "look": "Fleur en céramique Violette : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "5ec081dc-9868-40a2-aedc-ce9005b9fda0.jpg"
+  },
+  {
+   "slug": "fleur-coeur",
+   "name": "Fleur en céramique Coeur",
+   "look": "Fleur en céramique Coeur : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "9c2a89ff-f9ab-4f2a-ad88-bc4a0779ab85.jpg"
+  },
+  {
+   "slug": "fleur-rose",
+   "name": "Fleur en céramique Rose",
+   "look": "Fleur en céramique Rose : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "2aa8e723-b078-4244-96ea-c48c6964548b.jpg"
+  },
+  {
+   "slug": "fleurs-en-ceramique-champignon",
+   "name": "Fleur en céramique Champignon",
+   "look": "Fleur en céramique Champignon : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "de6b568d-0e7e-4264-87f1-5eebfff57aa0.jpg"
+  },
+  {
+   "slug": "fleurs-en-ceramique-trefle-",
+   "name": "Fleur en céramique Trefle",
+   "look": "Fleur en céramique Trefle : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "7 €",
+   "asset": "f85c5235-35e5-4778-8d0a-f585bb101074.jpg"
+  },
+  {
+   "slug": "fleurs-en-ceramique-turquoise",
+   "name": "Fleur en céramique Turquoise",
+   "look": "Fleur en céramique Turquoise : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "381a0990-572e-472c-9921-c88500fd2034.jpg"
+  },
+  {
+   "slug": "fleurs-en-ceramique-violette",
+   "name": "Fleur en céramique Violette",
+   "look": "Fleur en céramique Violette : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "90e3dbac-083c-4f67-abfe-bf5db2502d80.jpg"
+  },
+  {
+   "slug": "fleurs-en-ceramique-vert-pastel",
+   "name": "Fleur en céramique Vert Pastel",
+   "look": "Fleur en céramique Vert Pastel : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "46f57a23-7c2e-4357-a105-fcfaded20f98.jpg"
+  },
+  {
+   "slug": "fleurs-en-ceramique-coquelicot",
+   "name": "Fleur en céramique Coquelicot",
+   "look": "Fleur en céramique Coquelicot : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "7 €",
+   "asset": "b56ce36d-0b99-4698-ae0e-eb3a481e0073.jpg"
+  },
+  {
+   "slug": "fleurs-en-ceramique-tournesol",
+   "name": "Fleur en céramique Tournesol",
+   "look": "Fleur en céramique Tournesol : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "5 €",
+   "asset": "5ed143bf-1d21-4687-a4f4-dba75a20ed38.jpg"
+  },
+  {
+   "slug": "porte-bagues-potichat",
+   "name": "Porte bagues Potichat Marron",
+   "look": "Porte bagues Potichat Marron : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "38afb138-ca9e-4d8e-a03d-80c07a208044.jpg"
+  },
+  {
+   "slug": "assiette-creuse-origine",
+   "name": "Assiette creuse Folia",
+   "look": "Assiette creuse Folia : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "30 €",
+   "asset": "ff0a1e02-f8b3-4d2b-b1e8-a0362a71c48b.jpeg"
+  },
+  {
+   "slug": "tasse-a-coeur-ouvert",
+   "name": "Tasse à Cœur Ouvert",
+   "look": "Tasse à Cœur Ouvert : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "579168ba-76f4-48d2-8aa4-dc28af87dbb1.jpeg"
+  },
+  {
+   "slug": "tasse-origine-",
+   "name": "Tasse Folia",
+   "look": "Tasse Folia : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "27 €",
+   "asset": "98aa948f-59a6-4539-a863-110ba68edb85.jpeg"
+  },
+  {
+   "slug": "set-argeline",
+   "name": "Set Argéline",
+   "look": "Set Argéline : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "30 €",
+   "asset": "c09a5506-0bc4-4be1-b983-5de893e01ddc.jpeg"
+  },
+  {
+   "slug": "set-bleuette",
+   "name": "Set Bleuette",
+   "look": "Set Bleuette : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "30 €",
+   "asset": "cd0a8af6-55e7-409b-ac24-89255e5a8f0e.jpeg"
+  },
+  {
+   "slug": "set-amour",
+   "name": "Set Amour",
+   "look": "Set Amour : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "40 €",
+   "asset": "86b3fe41-a4e0-403c-ab37-46339eed4f55.jpeg"
+  },
+  {
+   "slug": "set-charlotte",
+   "name": "Set Charlotte",
+   "look": "Set Charlotte : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "40 €",
+   "asset": "114a880e-750c-43a9-84df-357a8483e469.jpeg"
+  },
+  {
+   "slug": "tasse-charlotte",
+   "name": "Tasse Charlotte",
+   "look": "Tasse Charlotte : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "52af9afa-3e18-46cd-bde5-80d2782376fd.jpeg"
+  },
+  {
+   "slug": "cabane-au-fond-des-bois",
+   "name": "Cabane au fond des bois",
+   "look": "Cabane au fond des bois : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "60 €",
+   "asset": "8524778b-e90a-459f-857d-8b1e98be48a7.jpeg"
+  },
+  {
+   "slug": "set-tulipe",
+   "name": "Set Tulipe",
+   "look": "Set Tulipe : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "40 €",
+   "asset": "73dcbb3c-97db-4cd3-b144-7f84264e54b6.jpeg"
+  },
+  {
+   "slug": "set-veronique",
+   "name": "Set Veronique",
+   "look": "Set Veronique : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "40 €",
+   "asset": "f3629251-4cc1-4120-b5ad-035a7795704f.jpeg"
+  },
+  {
+   "slug": "set-coquelicot",
+   "name": "Set Coquelicot",
+   "look": "Set Coquelicot : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "40 €",
+   "asset": "5ab832de-b0bd-4c6b-a2c9-52abb2c38597.jpeg"
+  },
+  {
+   "slug": "bol-saturnin-7d5b",
+   "name": "Bol Saturnin",
+   "look": "Bol Saturnin : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "28 €",
+   "asset": "f3f9e567-fc37-4667-8f1a-7580104dba64.jpeg"
+  },
+  {
+   "slug": "tasse-saturnin-5f4a",
+   "name": "Tasse Saturnin",
+   "look": "Tasse Saturnin : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "82f7ff2b-75c6-4f2f-aa4b-4619df493b85.jpeg"
+  },
+  {
+   "slug": "bol-saturnin-f43c",
+   "name": "Assiette creuse Saturnin",
+   "look": "Assiette creuse Saturnin : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "30 €",
+   "asset": "35aceaf6-f0a7-42c1-99c2-0f9bf99dde42.jpeg"
+  },
+  {
+   "slug": "gamelle-chat-arlo",
+   "name": "Gamelle chat Arlo",
+   "look": "Gamelle chat Arlo : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "6abfaec8-8958-4053-a55b-d0380ecc1741.jpeg"
+  },
+  {
+   "slug": "gamelle-chat-boleo",
+   "name": "Gamelle chat Boléo",
+   "look": "Gamelle chat Boléo : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "de0d4aae-1b1d-4164-b764-e24f5fb22ce3.jpeg"
+  },
+  {
+   "slug": "bol-veronique-",
+   "name": "Bol Véronique",
+   "look": "Bol Véronique : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "28 €",
+   "asset": "8e2fa78d-b8a4-4c94-a35b-f6e760c7c141.jpeg"
+  },
+  {
+   "slug": "bol-charlotte-",
+   "name": "Bol Charlotte",
+   "look": "Bol Charlotte : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "28 €",
+   "asset": "a917abd1-5f7f-4ac2-85e3-6cef9a6a3a26.jpeg"
+  },
+  {
+   "slug": "bol-coquelicot-",
+   "name": "Bol Coquelicot",
+   "look": "Bol Coquelicot : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "28 €",
+   "asset": "850d20b2-23d2-45e3-b9bc-6286fb75548b.jpeg"
+  },
+  {
+   "slug": "bol-tulipe",
+   "name": "Bol Tulipe",
+   "look": "Bol Tulipe : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "28 €",
+   "asset": "bd1c2db7-c0b5-47ac-8cc6-720393efbbce.jpeg"
+  },
+  {
+   "slug": "assiette-creuse-citron",
+   "name": "Assiette creuse Citron",
+   "look": "Assiette creuse Citron : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "30 €",
+   "asset": "a02da463-f81a-4f54-b074-c78a3b579bc7.jpeg"
+  },
+  {
+   "slug": "assiette-creuse-veronique-",
+   "name": "Assiette creuse Veronique",
+   "look": "Assiette creuse Veronique : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "30 €",
+   "asset": "98f352e1-10c5-4c48-b7a3-93abe6a5fa4a.jpeg"
+  },
+  {
+   "slug": "set-aperitif-modulo",
+   "name": "Set apéritif Modulo",
+   "look": "Set apéritif Modulo : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "70 €",
+   "asset": "e1f9c80a-c537-4d30-8d64-dd70231e649c.jpeg"
+  },
+  {
+   "slug": "assiette-creuse-amour",
+   "name": "Assiette creuse Amour",
+   "look": "Assiette creuse Amour : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "30 €",
+   "asset": "79da29c3-7b32-4f50-aea0-e9223ba2171e.jpeg"
+  },
+  {
+   "slug": "grand-bol-prune",
+   "name": "Assiette creuse Prune",
+   "look": "Assiette creuse Prune : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "32 €",
+   "asset": "1749631406647-img_1197.jpeg"
+  },
+  {
+   "slug": "tasse-expresso-prune",
+   "name": "Tasse Expresso Prune",
+   "look": "Tasse Expresso Prune : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "15 €",
+   "asset": "1749629303429-img_1198.jpeg"
+  },
+  {
+   "slug": "tasse-expresso-azur",
+   "name": "Tasse Expresso Azur",
+   "look": "Tasse Expresso Azur : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "15 €",
+   "asset": "1749629070252-img_1206.jpeg"
+  },
+  {
+   "slug": "assiette-creuse-charlotte",
+   "name": "Assiette creuse Charlotte",
+   "look": "Assiette creuse Charlotte : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "30 €",
+   "asset": "eae21739-cf72-4380-addf-00eead989ddf.jpeg"
+  },
+  {
+   "slug": "assiette-creuse-tulipe",
+   "name": "Assiette creuse Tulipe",
+   "look": "Assiette creuse Tulipe : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "30 €",
+   "asset": "1737308756885-IMG_1188.jpg"
+  },
+  {
+   "slug": "tasse-tendrement-toi",
+   "name": "Tasse Tendrement Toi",
+   "look": "Tasse Tendrement Toi : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "1736593187653-IMG_1033.jpg"
+  },
+  {
+   "slug": "tasse-amour-blanc-641f",
+   "name": "Tasse Amour Blanc",
+   "look": "Tasse Amour Blanc : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "1736247177577-IMG_0952.jpg"
+  },
+  {
+   "slug": "set-nuage",
+   "name": "Set Nuage",
+   "look": "Set Nuage : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "40 €",
+   "asset": "1734808062700-IMG_0669.jpeg"
+  },
+  {
+   "slug": "tasse-perle-mentholee",
+   "name": "Tasse Perle Mentholée",
+   "look": "Tasse Perle Mentholée : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "1733561613790-IMG_0614.jpg"
+  },
+  {
+   "slug": "tasse-coquelicot",
+   "name": "Tasse Coquelicot",
+   "look": "Tasse Coquelicot : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "1739085069466-IMG_1590.jpeg"
+  },
+  {
+   "slug": "tasse-tulipe",
+   "name": "Tasse Tulipe",
+   "look": "Tasse Tulipe : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "1739085370226-IMG_1595.jpeg"
+  },
+  {
+   "slug": "tasse-amour",
+   "name": "Tasse Amour",
+   "look": "Tasse Amour : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "1739085315125-IMG_1599.jpeg"
+  },
+  {
+   "slug": "tasse-veronique",
+   "name": "Tasse Veronique",
+   "look": "Tasse Veronique : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "25 €",
+   "asset": "1722427361215-20240731_090746.jpg"
+  },
+  {
+   "slug": "assiette-creuse-coquelicot",
+   "name": "Assiette creuse Coquelicot",
+   "look": "Assiette creuse Coquelicot : pièce en céramique artisanale façonnée et émaillée à la main (forme, couleurs et motifs exactement comme sur la photo de référence)",
+   "palette": "",
+   "scenes": [],
+   "price": "30 €",
+   "asset": "f6b46d3a-d528-4632-85ce-d4a862a288f9.jpeg"
+  },
+  {
+   "slug": "bol-lavande-fleurs-bleues",
+   "name": "Bol lavande à fleurs bleues",
+   "price": "",
+   "image": "assets/extra/bol-lavande-fleurs-bleues.jpg",
+   "look": "bol bas en faïence lavande peint à la main de fleurs bleu cobalt à cœur noir, dedans et dehors",
+   "palette": "lavande, bleu cobalt, bois miel",
+   "scenes": [
+    "A: plan de travail en bois clair huilé, myrtilles et figues violettes, branche de romarin, torchon en lin beige",
+    "B: champ de lavande provençal flou en arrière-plan, table en bois, lumière dorée"
+   ]
+  }
+ ]
 }
