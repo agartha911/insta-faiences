@@ -1,4 +1,5 @@
 # Écris ici les pièces à publier, une par ligne
 # À 18h, l'agent publie la 1re ligne puis la retire. Fichier vide = choix automatique.
+Tasse Veronique
 Tasse Amour | petale de rose
 Tasse Veronique
