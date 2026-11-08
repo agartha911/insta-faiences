@@ -1,0 +1,2 @@
+# Écris ici les pièces à publier, une par ligne (nom comme sur le site, ex : Tasse Coquelicot).
+# À 18h, l'agent publie la 1re ligne puis la retire. Fichier vide = choix automatique.

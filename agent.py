@@ -115,7 +115,55 @@ def products():
     return list(cat.values())
 
 
+QUEUE = ROOT / "prochain.txt"
+
+
+def _norm(t):
+    import unicodedata
+    t = unicodedata.normalize("NFKD", t.lower())
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]+", " ", t).strip()
+
+
+def match_product(text, items):
+    """Trouve la pièce correspondant au texte écrit à la main (nom ou slug, accents/majuscules ignorés)."""
+    q = _norm(text)
+    if not q:
+        return None
+    words = set(q.split())
+    best, score = None, 0
+    for p in items:
+        cand = _norm(p["name"]) + " " + _norm(p["slug"].replace("-", " "))
+        if q == _norm(p["name"]) or q == _norm(p["slug"].replace("-", " ")):
+            return p
+        sc = len(words & set(cand.split())) / len(words)
+        if sc > score:
+            best, score = p, sc
+    return best if score >= 0.99 else None
+
+
+def pick_from_queue(items):
+    """Lit prochain.txt : la 1re ligne utile est consommée (retirée du fichier)."""
+    if not QUEUE.exists():
+        return None
+    lines = QUEUE.read_text(encoding="utf-8").splitlines()
+    header = [l for l in lines if l.strip().startswith("#")]
+    todo = [l for l in lines if l.strip() and not l.strip().startswith("#")]
+    while todo:
+        line = todo.pop(0)
+        p = match_product(line, items)
+        QUEUE.write_text("\n".join(header + todo) + "\n", encoding="utf-8")
+        if p:
+            log("pièce choisie dans prochain.txt:", line.strip(), "->", p["name"])
+            return p
+        log("prochain.txt: pièce introuvable, ligne ignorée:", line.strip())
+    return None
+
+
 def pick_product(items, state):
+    chosen = pick_from_queue(items)
+    if chosen:
+        return chosen
     recent = [h["slug"] for h in state["history"]]
     never = [p for p in items if p["slug"] not in recent]
     if never:
