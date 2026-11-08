@@ -151,9 +151,13 @@ def pick_from_queue(items):
     todo = [l for l in lines if l.strip() and not l.strip().startswith("#")]
     while todo:
         line = todo.pop(0)
-        p = match_product(line, items)
+        piece, _, decor = line.partition("|")
+        p = match_product(piece, items)
         QUEUE.write_text("\n".join(header + todo) + "\n", encoding="utf-8")
         if p:
+            p = dict(p)
+            if decor.strip():
+                p["_decor"] = decor.strip()
             log("pièce choisie dans prochain.txt:", line.strip(), "->", p["name"])
             return p
         log("prochain.txt: pièce introuvable, ligne ignorée:", line.strip())
@@ -386,6 +390,8 @@ def main(stage):
         items = products()
         p = pick_product(items, state)
         ad = art_direction(p, state)
+        if p.get("_decor"):
+            ad.update(concept="perso", cat="perso", scene=p["_decor"])
         log("pièce:", p["name"], "|", ad["concept"], "|", ad["angle"], "|", ad["light"])
         prompt = image_prompt(p, ad)
         if os.getenv("OPENAI_API_KEY"):
