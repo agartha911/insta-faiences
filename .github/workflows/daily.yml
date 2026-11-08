@@ -7,11 +7,11 @@ on:
   workflow_dispatch:
     inputs:
       force:
-        description: "Générer et publier tout de suite (ignore l'heure)"
+        description: "Publier tout de suite"
         type: boolean
         default: false
       dry_run:
-        description: "Test : générer sans publier"
+        description: "Test sans publier"
         type: boolean
         default: true
 
@@ -27,10 +27,29 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
-      IG_USER_ID: ${{ secrets.IG_USER_ID }}
-      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-      IMAGE_MODEL: ${{ vars.IMAGE_MODEL || 'gpt-image-2' }}
-      TEXT_MODEL: ${{ vars.TEXT_MODEL || 'gpt-5-mini' }}
-      DRY_RUN: ${{
+      OPENAI_API_KEY: "${{ secrets.OPENAI_API_KEY }}"
+      IG_USER_ID: "${{ secrets.IG_USER_ID }}"
+      IG_ACCESS_TOKEN: "${{ secrets.IG_ACCESS_TOKEN }}"
+      DRY_RUN: "${{ inputs.dry_run && '1' || vars.DRY_RUN || '0' }}"
+      FORCE: "${{ inputs.force && '1' || '0' }}"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Preparer le visuel
+        run: python agent.py prepare
+      - name: Mettre le visuel en ligne
+        run: |
+          git config user.name "insta-agent"
+          git config user.email "insta-agent@users.noreply.github.com"
+          git add -A posts state.json || true
+          git diff --cached --quiet || (git commit -m "Visuel du jour" && git push)
+      - name: Publier a 18h
+        run: python agent.py publish
+      - name: Enregistrer la publication
+        if: always()
+        run: |
+          git add -A state.json || true
+          git diff --cached --quiet || (git commit -m "Publication enregistree" && git pull --rebase && git push)
