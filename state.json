@@ -15,14 +15,14 @@
     },
     {
       "date": "2026-11-08",
-      "slug": "tasse-veronique",
-      "name": "Tasse Veronique",
-      "file": "posts/2026-11-08-tasse-veronique.jpg",
-      "concept": "levitation",
-      "cat": "graphique",
-      "scene": "la pièce en légère lévitation au-dessus de son ombre, fond uni, éléments du décor en suspension (fruits, fleurs, gouttes)",
-      "angle": "vue de face à hauteur de la pièce",
-      "light": "lumière diffuse de ciel couvert",
+      "slug": "tasse-amour",
+      "name": "Tasse Amour",
+      "file": "posts/2026-11-08-tasse-amour.jpg",
+      "concept": "perso",
+      "cat": "perso",
+      "scene": "petale de rose",
+      "angle": "vue de trois-quarts légèrement plongeante",
+      "light": "lumière de studio en clair-obscur",
       "published": false,
       "test": true
     }
