@@ -168,7 +168,7 @@ def pick_product(items, state):
     chosen = pick_from_queue(items)
     if chosen:
         return chosen
-    recent = [h["slug"] for h in state["history"]]
+    recent = [h["slug"] for h in state["history"] if not h.get("test")]
     never = [p for p in items if p["slug"] not in recent]
     if never:
         return random.choice(never)
@@ -406,9 +406,13 @@ def main(stage):
         (POSTS / name).write_bytes(final)
         caption = write_caption(p, ad['scene'], final)
         (POSTS / name.replace(".jpg", ".txt")).write_text(caption)
-        state["history"] = [h for h in state["history"] if h["date"] != today] + [{
-            "date": today, "slug": p["slug"], "name": p["name"], "file": f"posts/{name}",
-            **ad, "published": False}]
+        entry = {"date": today, "slug": p["slug"], "name": p["name"], "file": f"posts/{name}",
+                 **ad, "published": False}
+        if DRY:
+            entry["test"] = True   # un test ne compte jamais comme une publication
+        # on ne supprime jamais un post réellement publié
+        state["history"] = [h for h in state["history"]
+                            if not (h["date"] == today and not h.get("published"))] + [entry]
         state["history"] = state["history"][-400:]
         save_state(state)
         log("prêt:", name)
