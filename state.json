@@ -2,16 +2,15 @@
   "history": [
     {
       "date": "2026-11-08",
-      "slug": "support-a-eponge1",
-      "name": "Support à éponge (bleu cannelé)",
-      "file": "posts/2026-11-08-support-a-eponge1.jpg",
-      "concept": "macro-texture",
-      "cat": "graphique",
-      "scene": "gros plan macro sur l'émail et le geste peint, profondeur de champ très faible, pièce entière visible mais cadrée serré",
-      "angle": "vue de trois-quarts légèrement plongeante",
-      "light": "lumière naturelle douce d'une fenêtre latérale",
-      "published": true,
-      "media_id": "18080544863740822"
+      "slug": "bol-calypso",
+      "name": "Bol Calypso",
+      "file": "posts/2026-11-08-bol-calypso.jpg",
+      "concept": "lit-plateau",
+      "cat": "lifestyle",
+      "scene": "plateau de petit-déjeuner au lit, draps en lin froissés, lumière douce du dimanche matin",
+      "angle": "vue de dessus à la verticale",
+      "light": "lumière de studio en clair-obscur",
+      "published": false
     }
   ]
 }
