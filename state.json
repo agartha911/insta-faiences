@@ -25,6 +25,18 @@
       "light": "lumière de studio en clair-obscur",
       "published": false,
       "test": true
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "assiette-creuse-coquelicot",
+      "name": "Assiette creuse Coquelicot",
+      "file": "posts/2026-11-09-assiette-creuse-coquelicot.jpg",
+      "concept": "studio-arche",
+      "cat": "studio",
+      "scene": "petit podium et arche en plâtre aux tons pastel assortis à la pièce, composition architecturale minimaliste",
+      "angle": "vue de face à hauteur de la pièce",
+      "light": "lumière dure de midi, ombres nettes et graphiques",
+      "published": false
     }
   ]
 }
