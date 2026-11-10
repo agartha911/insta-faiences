@@ -41,14 +41,14 @@
     },
     {
       "date": "2026-11-10",
-      "slug": "tasse-amour",
-      "name": "Tasse Amour",
-      "file": "posts/2026-11-10-tasse-amour.jpg",
-      "concept": "terrasse-med",
-      "cat": "lifestyle",
-      "scene": "terrasse méditerranéenne, mur blanchi à la chaux, bougainvilliers, ombres de feuillage",
-      "angle": "vue plongeante à 45°",
-      "light": "contre-jour lumineux avec halo sur les bords de la pièce",
+      "slug": "assiette-creuse-charlotte",
+      "name": "Assiette creuse Charlotte",
+      "file": "posts/2026-11-10-assiette-creuse-charlotte.jpg",
+      "concept": "macro-texture",
+      "cat": "graphique",
+      "scene": "gros plan macro sur l'émail et le geste peint, profondeur de champ très faible, pièce entière visible mais cadrée serré",
+      "angle": "cadrage serré décentré selon la règle des tiers",
+      "light": "lumière diffuse de ciel couvert",
       "published": false
     }
   ]
