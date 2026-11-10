@@ -38,6 +38,18 @@
       "light": "lumière dure de midi, ombres nettes et graphiques",
       "published": true,
       "media_id": "17969385981014525"
+    },
+    {
+      "date": "2026-11-10",
+      "slug": "tasse-amour",
+      "name": "Tasse Amour",
+      "file": "posts/2026-11-10-tasse-amour.jpg",
+      "concept": "terrasse-med",
+      "cat": "lifestyle",
+      "scene": "terrasse méditerranéenne, mur blanchi à la chaux, bougainvilliers, ombres de feuillage",
+      "angle": "vue plongeante à 45°",
+      "light": "contre-jour lumineux avec halo sur les bords de la pièce",
+      "published": false
     }
   ]
 }
