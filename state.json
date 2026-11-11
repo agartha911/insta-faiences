@@ -90,8 +90,10 @@
       "scene": "Drapé de soie froissée vert menthe pâle en arrière-plan (couleur complémentaire) avec lumière douce de studio ; la pièce posée au centre sur le tissu, accompagnée d'une petite branche d'eucalyptus et de quelques mini-boutons blancs pour accentuer l'esprit floral et faire ressortir les rouges.",
       "angle": "vue plongeante à 45°",
       "light": "lumière de studio en clair-obscur",
-      "published": false,
-      "manual": true
+      "published": true,
+      "manual": true,
+      "media_id": "18110569478258650",
+      "fb_post_id": "316950471498948_122241623642312357"
     }
   ]
 }
