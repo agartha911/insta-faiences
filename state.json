@@ -79,6 +79,19 @@
       "published": true,
       "media_id": "18122781035075486",
       "fb_post_id": "316950471498948_122241618152312357"
+    },
+    {
+      "date": "2026-11-11",
+      "slug": "assiette-creuse-charlotte",
+      "name": "Assiette creuse Charlotte",
+      "file": "posts/2026-11-11-assiette-creuse-charlotte.jpg",
+      "concept": "studio-tissu",
+      "cat": "studio",
+      "scene": "Drapé de soie froissée vert menthe pâle en arrière-plan (couleur complémentaire) avec lumière douce de studio ; la pièce posée au centre sur le tissu, accompagnée d'une petite branche d'eucalyptus et de quelques mini-boutons blancs pour accentuer l'esprit floral et faire ressortir les rouges.",
+      "angle": "vue plongeante à 45°",
+      "light": "lumière de studio en clair-obscur",
+      "published": false,
+      "manual": true
     }
   ]
 }
