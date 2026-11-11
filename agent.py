@@ -282,7 +282,7 @@ PIÈCE (référence = photo fournie) : {p.get('look', p['name'])}.
 RÈGLE ABSOLUE : la pièce doit rester strictement identique à la photo — même forme, mêmes proportions, même couleur d'émail, même motif peint (nombre, taille et position des motifs), même texture artisanale. Tu peux seulement changer l'angle de vue, la lumière et l'environnement. Ne rajoute aucun logo ni texte sur la pièce.
 
 DÉCOR : {ad['scene']}. Le décor est riche et vivant (plusieurs éléments, matières, végétaux), jamais un simple fond uni. Les couleurs du décor reprennent et mettent en valeur celles de la pièce{(' (' + p['palette'] + ')') if p.get('palette') else ''}.
-CADRAGE : {ad['angle']}. La pièce est le sujet principal, nette, composition éditoriale (règle des tiers), arrière-plan en faible profondeur de champ.
+CADRAGE : {ad['angle']}. La pièce est le sujet principal, nette, ENTIÈRE et visible en totalité (rien de coupé, ni le haut ni le bas), centrée dans l'image avec de l'espace libre autour ; elle occupe environ la moitié de la hauteur de l'image. Les 15 % du haut et les 15 % du bas de l'image ne contiennent que du décor (l'image sera recadrée). Arrière-plan en faible profondeur de champ.
 LUMIÈRE : {ad['light']}. Ombres de contact et occlusion ambiante réalistes, reflets naturels sur l'émail, la pièce parfaitement intégrée à la scène (même lumière, même température de couleur).
 RENDU : vraie photo (pas d'aspect 3D ni illustration), étalonnage élégant et artisanal. Format vertical, aucun texte, aucun filigrane."""
 

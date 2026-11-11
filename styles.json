@@ -127,11 +127,6 @@
       "desc": "la pièce en légère lévitation au-dessus de son ombre, fond uni, éléments du décor en suspension (fruits, fleurs, gouttes)"
     },
     {
-      "id": "macro-texture",
-      "cat": "graphique",
-      "desc": "gros plan macro sur l'émail et le geste peint, profondeur de champ très faible, pièce entière visible mais cadrée serré"
-    },
-    {
       "id": "noel",
       "cat": "saison",
       "months": [
@@ -185,9 +180,7 @@
     "vue de face à hauteur de la pièce",
     "vue de trois-quarts légèrement plongeante",
     "vue plongeante à 45°",
-    "vue de dessus à la verticale",
-    "contre-plongée légère, la pièce dominant le cadre",
-    "cadrage serré décentré selon la règle des tiers"
+    "vue de dessus à la verticale"
   ],
   "lights": [
     "lumière naturelle douce d'une fenêtre latérale",
