@@ -506,7 +506,7 @@ def main(stage):
             log("pas de clé OpenAI : image produit brute (test)")
             raw = img
         n = len(state["history"])
-        final = finish_image(raw, signature=(n % 4 == 3))
+        final = finish_image(raw, signature=False)
         POSTS.mkdir(exist_ok=True)
         name = f"{today}-{p['slug'].strip('-')}.jpg"
         (POSTS / name).write_bytes(final)
