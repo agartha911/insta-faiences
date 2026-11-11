@@ -50,6 +50,19 @@
       "angle": "cadrage serré décentré selon la règle des tiers",
       "light": "lumière diffuse de ciel couvert",
       "published": false
+    },
+    {
+      "date": "2026-11-11",
+      "slug": "tasse-amour",
+      "name": "Tasse Amour",
+      "file": "posts/2026-11-11-tasse-amour.jpg",
+      "concept": "marbre-luxe",
+      "cat": "editorial",
+      "scene": "comptoir en marbre veiné, accents laiton, lumière douce de galerie",
+      "angle": "contre-plongée légère, la pièce dominant le cadre",
+      "light": "lumière de studio en clair-obscur",
+      "published": false,
+      "test": true
     }
   ]
 }
