@@ -440,7 +440,8 @@ def main(stage):
             if dt.datetime.now(PARIS).hour not in (POST_HOUR - 1, POST_HOUR):
                 log("pas l'heure (autre fuseau saisonnier), rien à faire")
                 return
-            if any(h["date"] == today and h.get("published") for h in state["history"]):
+            # seule la publication automatique de 18h compte (une publication manuelle "force" n'empêche pas celle du soir)
+            if any(h["date"] == today and h.get("published") and not h.get("manual") for h in state["history"]):
                 log("déjà publié aujourd'hui")
                 return
         items = products()
@@ -464,6 +465,8 @@ def main(stage):
         (POSTS / name.replace(".jpg", ".txt")).write_text(caption)
         entry = {"date": today, "slug": p["slug"], "name": p["name"], "file": f"posts/{name}",
                  **ad, "published": False}
+        if FORCE:
+            entry["manual"] = True
         if DRY:
             entry["test"] = True   # un test ne compte jamais comme une publication
         # on ne supprime jamais un post réellement publié
