@@ -65,6 +65,20 @@
       "manual": true,
       "media_id": "17911704321579134",
       "fb_error": "Page liée introuvable parmi: []"
+    },
+    {
+      "date": "2026-11-11",
+      "slug": "assiette-creuse-charlotte",
+      "name": "Assiette creuse Charlotte",
+      "file": "posts/2026-11-11-assiette-creuse-charlotte.jpg",
+      "concept": "scandinave",
+      "cat": "editorial",
+      "scene": "intérieur scandinave, chêne clair, mur blanc, rayon de soleil d'hiver",
+      "angle": "contre-plongée légère, la pièce dominant le cadre",
+      "light": "lumière dure de midi, ombres nettes et graphiques",
+      "published": false,
+      "manual": true,
+      "test": true
     }
   ]
 }
