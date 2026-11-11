@@ -143,7 +143,8 @@ def match_product(text, items):
 
 
 def pick_from_queue(items):
-    """Lit prochain.txt : la 1re ligne utile est consommée (retirée du fichier)."""
+    """Lit prochain.txt : la 1re ligne utile est consommée (retirée du fichier).
+    En test (DRY_RUN), la ligne est seulement lue : la liste ne bouge pas."""
     if not QUEUE.exists():
         return None
     lines = QUEUE.read_text(encoding="utf-8").splitlines()
@@ -153,7 +154,8 @@ def pick_from_queue(items):
         line = todo.pop(0)
         piece, _, decor = line.partition("|")
         p = match_product(piece, items)
-        QUEUE.write_text("\n".join(header + todo) + "\n", encoding="utf-8")
+        if not DRY:
+            QUEUE.write_text("\n".join(header + todo) + "\n", encoding="utf-8")
         if p:
             p = dict(p)
             if decor.strip():
@@ -349,6 +351,60 @@ def publish(image_url, caption):
     return r.json()["id"]
 
 
+FB = "https://graph.facebook.com/v24.0"
+
+
+def fb_page():
+    """Trouve la Page Facebook liée au compte Instagram et son jeton de Page."""
+    pid, ptok = os.getenv("FB_PAGE_ID"), os.getenv("FB_PAGE_TOKEN")
+    if pid and ptok:
+        return pid, ptok, "secret"
+    r = requests.get(f"{FB}/me/accounts", timeout=60, params={
+        "fields": "id,name,access_token,instagram_business_account", "limit": 100,
+        "access_token": os.environ["IG_ACCESS_TOKEN"]})
+    data = r.json()
+    if "error" in data:
+        raise RuntimeError(f"accès aux Pages refusé: {data['error'].get('message')}")
+    for pg in data.get("data", []):
+        if (pg.get("instagram_business_account") or {}).get("id") == os.getenv("IG_USER_ID") or pg["id"] == pid:
+            return pg["id"], pg["access_token"], pg.get("name")
+    raise RuntimeError(f"Page liée introuvable parmi: {[p.get('name') for p in data.get('data', [])]}")
+
+
+def fb_caption(caption):
+    """Même texte qu'Instagram, sans le bloc de hashtags (inutile sur Facebook)."""
+    keep = [l for l in caption.splitlines() if not (l.strip().startswith("#") and l.count("#") >= 3)]
+    txt = "\n".join(keep).strip()
+    return txt.replace("celineetsesfaiences.com (lien en bio)", "https://celineetsesfaiences.com")
+
+
+def fb_publish(image_url, caption):
+    pid, ptok, _ = fb_page()
+    r = requests.post(f"{FB}/{pid}/photos", timeout=180, data={
+        "url": image_url, "message": fb_caption(caption), "access_token": ptok})
+    if not r.ok:
+        raise RuntimeError(r.text[:400])
+    return r.json().get("post_id") or r.json().get("id")
+
+
+def fb_check():
+    """Test : vérifie l'accès à la Page sans rien publier."""
+    lines = []
+    try:
+        perms = requests.get(f"{FB}/me/permissions", timeout=60,
+                             params={"access_token": os.environ["IG_ACCESS_TOKEN"]}).json()
+        granted = [p["permission"] for p in perms.get("data", []) if p.get("status") == "granted"]
+        lines.append("permissions: " + (", ".join(granted) or str(perms)[:300]))
+    except Exception as e:  # noqa
+        lines.append(f"permissions: erreur {e}")
+    try:
+        pid, _, name = fb_page()
+        lines.append(f"page: OK {name} ({pid})")
+    except Exception as e:  # noqa
+        lines.append(f"page: ECHEC {e}")
+    return "\n".join(lines)
+
+
 def refresh_token():
     """Prolonge le jeton (valable 60 jours). Renvoie le nouveau jeton ou None."""
     tok = os.getenv("IG_ACCESS_TOKEN")
@@ -415,6 +471,8 @@ def main(stage):
                             if not (h["date"] == today and not h.get("published"))] + [entry]
         state["history"] = state["history"][-400:]
         save_state(state)
+        if DRY and os.getenv("IG_ACCESS_TOKEN"):
+            (POSTS / "facebook-test.txt").write_text(fb_check() + "\n", encoding="utf-8")
         log("prêt:", name)
 
     elif stage == "publish":
@@ -436,7 +494,15 @@ def main(stage):
         entry["published"] = True
         entry["media_id"] = media_id
         save_state(state)
-        log("publié ✔", media_id)
+        log("publié sur Instagram ✔", media_id)
+        if os.getenv("FACEBOOK", "1") != "0":
+            try:
+                entry["fb_post_id"] = fb_publish(url, caption)
+                log("publié sur Facebook ✔", entry["fb_post_id"])
+            except Exception as e:  # noqa — Facebook ne doit jamais bloquer Instagram
+                entry["fb_error"] = str(e)[:300]
+                log("Facebook: échec —", e)
+            save_state(state)
 
     elif stage == "refresh":
         new = refresh_token()
