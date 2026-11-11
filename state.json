@@ -56,13 +56,13 @@
       "slug": "tasse-amour",
       "name": "Tasse Amour",
       "file": "posts/2026-11-11-tasse-amour.jpg",
-      "concept": "marbre-luxe",
-      "cat": "editorial",
-      "scene": "comptoir en marbre veiné, accents laiton, lumière douce de galerie",
-      "angle": "contre-plongée légère, la pièce dominant le cadre",
-      "light": "lumière de studio en clair-obscur",
+      "concept": "foret-mousse",
+      "cat": "nature",
+      "scene": "sous-bois, tapis de mousse, fougères et rayons de soleil filtrés",
+      "angle": "vue de trois-quarts légèrement plongeante",
+      "light": "lumière naturelle douce d'une fenêtre latérale",
       "published": false,
-      "test": true
+      "manual": true
     }
   ]
 }
