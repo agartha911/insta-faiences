@@ -241,8 +241,8 @@ def ai_art_direction(p, ad, img_png):
     instr = f"""Tu es directeur artistique pour une céramiste artisanale. Voici la photo de la pièce « {p['name']} ».
 1. Décris précisément la pièce (forme, couleur d'émail, motifs peints et leurs couleurs) en 1 phrase.
 2. Donne sa palette (3 à 4 couleurs).
-3. Choisis dans la liste ci-dessous LE décor qui met le mieux en valeur CETTE pièce : couleurs en harmonie ou complémentaires, ambiance cohérente avec ses motifs (ex. fleurs roses -> univers floral, doux, romantique ; bleu profond -> eau, minéral, nordique). Écarte tout décor sans rapport avec la pièce.
-4. Réécris ce décor en 1 à 2 phrases, adapté à la pièce (accessoires, fleurs, fruits ou matières dans ses couleurs).
+3. Choisis dans la liste ci-dessous LE décor qui met le mieux en valeur CETTE pièce. RÈGLE : décor TON SUR TON — le fond et les accessoires reprennent la couleur dominante de la pièce (pièce rose -> fond rose poudré ; pièce bleue -> fond bleu), en nuances un peu plus claires ou plus foncées. Pas de couleur complémentaire ni contrastée en fond.
+4. Réécris ce décor en 1 à 2 phrases, adapté à la pièce, en REPRENANT SES MOTIFS dans le décor (pièce à fleurs -> vraies fleurs de la même couleur autour ; pièce à pois -> petits fruits ronds ; pièce à cœurs -> pétales, cœurs...). Exemple : bol rose à fleurs rouges -> fond rose poudré, pétales et fleurs roses et rouges éparpillés autour.
 Décors autorisés :
 {lst}
 Réponds uniquement en JSON : {{"look": "...", "palette": "...", "id": "...", "scene": "..."}}"""
@@ -258,6 +258,8 @@ Réponds uniquement en JSON : {{"look": "...", "palette": "...", "id": "...", "s
         txt = j.get("output_text") or "".join(
             c.get("text", "") for o in j.get("output", []) for c in o.get("content", []) or [] if c.get("type") == "output_text")
         data = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
+        # l'IA renvoie parfois des listes : on remet tout en texte
+        data = {k: (", ".join(map(str, v)) if isinstance(v, list) else str(v)) for k, v in data.items()}
         chosen = next((c for c in cands if c["id"] == data.get("id")), None)
         if chosen:
             ad.update(concept=chosen["id"], cat=chosen["cat"])
