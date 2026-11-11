@@ -241,7 +241,7 @@ def ai_art_direction(p, ad, img_png):
     instr = f"""Tu es directeur artistique pour une céramiste artisanale. Voici la photo de la pièce « {p['name']} ».
 1. Décris précisément la pièce (forme, couleur d'émail, motifs peints et leurs couleurs) en 1 phrase.
 2. Donne sa palette (3 à 4 couleurs).
-3. Choisis dans la liste ci-dessous LE décor qui met le mieux en valeur CETTE pièce. RÈGLE : décor TON SUR TON — le fond et les accessoires reprennent la couleur dominante de la pièce (pièce rose -> fond rose poudré ; pièce bleue -> fond bleu), en nuances un peu plus claires ou plus foncées. Pas de couleur complémentaire ni contrastée en fond.
+3. Choisis dans la liste ci-dessous LE décor qui met le mieux en valeur CETTE pièce. RÈGLE : décor TON SUR TON — le fond et les accessoires reprennent la couleur dominante de la pièce (pièce rose -> fond rose poudré ; pièce bleue -> fond bleu), en nuances un peu plus claires ou plus foncées. Pas de couleur complémentaire ni contrastée en fond. JAMAIS un simple fond uni vide : toujours un vrai décor riche et vivant (matières, fleurs, fruits, objets, végétaux) dans ces mêmes tons.
 4. Réécris ce décor en 1 à 2 phrases, adapté à la pièce, en REPRENANT SES MOTIFS dans le décor (pièce à fleurs -> vraies fleurs de la même couleur autour ; pièce à pois -> petits fruits ronds ; pièce à cœurs -> pétales, cœurs...). Exemple : bol rose à fleurs rouges -> fond rose poudré, pétales et fleurs roses et rouges éparpillés autour.
 Décors autorisés :
 {lst}
@@ -281,7 +281,7 @@ def image_prompt(p, ad):
 PIÈCE (référence = photo fournie) : {p.get('look', p['name'])}.
 RÈGLE ABSOLUE : la pièce doit rester strictement identique à la photo — même forme, mêmes proportions, même couleur d'émail, même motif peint (nombre, taille et position des motifs), même texture artisanale. Tu peux seulement changer l'angle de vue, la lumière et l'environnement. Ne rajoute aucun logo ni texte sur la pièce.
 
-DÉCOR : {ad['scene']}. Les couleurs du décor reprennent et mettent en valeur celles de la pièce{(' (' + p['palette'] + ')') if p.get('palette') else ''}.
+DÉCOR : {ad['scene']}. Le décor est riche et vivant (plusieurs éléments, matières, végétaux), jamais un simple fond uni. Les couleurs du décor reprennent et mettent en valeur celles de la pièce{(' (' + p['palette'] + ')') if p.get('palette') else ''}.
 CADRAGE : {ad['angle']}. La pièce est le sujet principal, nette, composition éditoriale (règle des tiers), arrière-plan en faible profondeur de champ.
 LUMIÈRE : {ad['light']}. Ombres de contact et occlusion ambiante réalistes, reflets naturels sur l'émail, la pièce parfaitement intégrée à la scène (même lumière, même température de couleur).
 RENDU : vraie photo (pas d'aspect 3D ni illustration), étalonnage élégant et artisanal. Format vertical, aucun texte, aucun filigrane."""

@@ -1,40 +1,185 @@
 {
   "_note": "Bibliothèque de mises en scène. L'agent ne réutilise jamais un concept avant que 25 autres soient passés, ne prend jamais la même catégorie, le même angle ou la même lumière deux jours de suite. Ajoute librement des concepts ici.",
   "concepts": [
-    {"id": "studio-couleur", "cat": "studio", "desc": "fond studio papier sans couture d'une couleur unie reprenant la teinte dominante de la pièce, une seule ombre portée nette et graphique"},
-    {"id": "studio-arche", "cat": "studio", "desc": "petit podium et arche en plâtre aux tons pastel assortis à la pièce, composition architecturale minimaliste"},
-    {"id": "studio-ombre-palmier", "cat": "studio", "desc": "mur uni teinté avec grande ombre portée de feuille de palmier, lumière de soleil dure"},
-    {"id": "studio-tissu", "cat": "studio", "desc": "drapé de tissu en soie froissée dans une couleur complémentaire de la pièce, lumière douce de studio"},
-    {"id": "eau-vagues", "cat": "nature", "desc": "pièce posée sur un rocher, vagues et éclaboussures d'eau dans les tons de la pièce, gouttelettes figées, lumière vive"},
-    {"id": "eau-lac", "cat": "nature", "desc": "pierre plate au bord d'un lac calme au petit matin, brume légère, reflets dans l'eau"},
-    {"id": "foret-mousse", "cat": "nature", "desc": "sous-bois, tapis de mousse, fougères et rayons de soleil filtrés"},
-    {"id": "plage-sable", "cat": "nature", "desc": "sable fin, coquillages, ombre de parasol, lumière blanche d'été"},
-    {"id": "champ-fleurs", "cat": "nature", "desc": "muret en pierre devant un champ de fleurs sauvages flou, dans les couleurs de la pièce, lumière dorée de fin de journée"},
-    {"id": "jardin-pluie", "cat": "nature", "desc": "table de jardin en fer mouillée après la pluie, gouttes sur l'émail, verdure luxuriante floue"},
-    {"id": "cuisine-matin", "cat": "lifestyle", "desc": "petit-déjeuner sur plan de travail, ingrédients et fruits de la couleur de la pièce, lumière du matin par la fenêtre"},
-    {"id": "table-diner", "cat": "lifestyle", "desc": "table de dîner dressée à la bougie, nappe en lin, verres, ambiance chaleureuse du soir"},
-    {"id": "lit-plateau", "cat": "lifestyle", "desc": "plateau de petit-déjeuner au lit, draps en lin froissés, lumière douce du dimanche matin"},
-    {"id": "bureau-lecture", "cat": "lifestyle", "desc": "coin lecture près d'une fenêtre, livre ouvert, plaid en laine, vapeur qui s'élève"},
-    {"id": "pique-nique", "cat": "lifestyle", "desc": "pique-nique dans l'herbe, nappe vichy, panier en osier, lumière d'été"},
-    {"id": "terrasse-med", "cat": "lifestyle", "desc": "terrasse méditerranéenne, mur blanchi à la chaux, bougainvilliers, ombres de feuillage"},
-    {"id": "atelier-argile", "cat": "atelier", "desc": "établi de céramiste, argile crue, outils de tournage, poussière de terre, lumière latérale chaude"},
-    {"id": "atelier-mains", "cat": "atelier", "desc": "mains de l'artisane tenant délicatement la pièce, tablier en lin, atelier flou derrière"},
-    {"id": "atelier-etagere", "cat": "atelier", "desc": "étagère en bois de l'atelier avec d'autres pièces floues en arrière-plan, la pièce au premier plan"},
-    {"id": "wabi-sabi", "cat": "editorial", "desc": "minimalisme japonais wabi-sabi, pierre brute, branche sèche, natte, beaucoup d'espace vide"},
-    {"id": "scandinave", "cat": "editorial", "desc": "intérieur scandinave, chêne clair, mur blanc, rayon de soleil d'hiver"},
-    {"id": "moody-clair-obscur", "cat": "editorial", "desc": "nature morte façon peinture flamande, fond sombre, clair-obscur, fruits et drapé"},
-    {"id": "marbre-luxe", "cat": "editorial", "desc": "comptoir en marbre veiné, accents laiton, lumière douce de galerie"},
-    {"id": "terracotta", "cat": "editorial", "desc": "mur et sol en terre cuite, soleil couchant, ombres longues"},
-    {"id": "beton-brut", "cat": "editorial", "desc": "béton ciré et lignes architecturales, lumière zénithale, composition graphique"},
-    {"id": "flatlay", "cat": "graphique", "desc": "vue de dessus à plat (flat lay), pièce entourée d'éléments assortis disposés de façon géométrique sur fond coloré"},
-    {"id": "levitation", "cat": "graphique", "desc": "la pièce en légère lévitation au-dessus de son ombre, fond uni, éléments du décor en suspension (fruits, fleurs, gouttes)"},
-    {"id": "macro-texture", "cat": "graphique", "desc": "gros plan macro sur l'émail et le geste peint, profondeur de champ très faible, pièce entière visible mais cadrée serré"},
-    {"id": "duo-couleur", "cat": "graphique", "desc": "fond coupé en deux aplats de couleurs complémentaires, la pièce à la jonction, style affiche"},
-    {"id": "noel", "cat": "saison", "months": [11, 12], "desc": "table de Noël, branches de sapin, guirlande lumineuse floue, papier kraft et ficelle"},
-    {"id": "automne", "cat": "saison", "months": [9, 10, 11], "desc": "feuilles mortes rousses, courges, plaid, lumière dorée d'automne"},
-    {"id": "printemps", "cat": "saison", "months": [3, 4, 5], "desc": "branches en fleurs de cerisier, lumière fraîche, tons pastel"},
-    {"id": "ete", "cat": "saison", "months": [6, 7, 8], "desc": "citrons, glaçons, lumière de plein soleil, ombres nettes de vacances"},
-    {"id": "hiver-neige", "cat": "saison", "months": [12, 1, 2], "desc": "rebord de fenêtre givré, neige dehors, boisson chaude fumante"}
+    {
+      "id": "studio-arche",
+      "cat": "studio",
+      "desc": "podium et arche en plâtre aux tons de la pièce, entourés de fleurs, fruits et feuillages assortis, composition riche et architecturale"
+    },
+    {
+      "id": "studio-tissu",
+      "cat": "studio",
+      "desc": "drapé de tissu en soie froissée dans la couleur de la pièce, avec fleurs, pétales et petits objets assortis disposés autour"
+    },
+    {
+      "id": "eau-vagues",
+      "cat": "nature",
+      "desc": "pièce posée sur un rocher, vagues et éclaboussures d'eau dans les tons de la pièce, gouttelettes figées, lumière vive"
+    },
+    {
+      "id": "eau-lac",
+      "cat": "nature",
+      "desc": "pierre plate au bord d'un lac calme au petit matin, brume légère, reflets dans l'eau"
+    },
+    {
+      "id": "foret-mousse",
+      "cat": "nature",
+      "desc": "sous-bois, tapis de mousse, fougères et rayons de soleil filtrés"
+    },
+    {
+      "id": "plage-sable",
+      "cat": "nature",
+      "desc": "sable fin, coquillages, ombre de parasol, lumière blanche d'été"
+    },
+    {
+      "id": "champ-fleurs",
+      "cat": "nature",
+      "desc": "muret en pierre devant un champ de fleurs sauvages flou, dans les couleurs de la pièce, lumière dorée de fin de journée"
+    },
+    {
+      "id": "jardin-pluie",
+      "cat": "nature",
+      "desc": "table de jardin en fer mouillée après la pluie, gouttes sur l'émail, verdure luxuriante floue"
+    },
+    {
+      "id": "cuisine-matin",
+      "cat": "lifestyle",
+      "desc": "petit-déjeuner sur plan de travail, ingrédients et fruits de la couleur de la pièce, lumière du matin par la fenêtre"
+    },
+    {
+      "id": "table-diner",
+      "cat": "lifestyle",
+      "desc": "table de dîner dressée à la bougie, nappe en lin, verres, ambiance chaleureuse du soir"
+    },
+    {
+      "id": "lit-plateau",
+      "cat": "lifestyle",
+      "desc": "plateau de petit-déjeuner au lit, draps en lin froissés, lumière douce du dimanche matin"
+    },
+    {
+      "id": "bureau-lecture",
+      "cat": "lifestyle",
+      "desc": "coin lecture près d'une fenêtre, livre ouvert, plaid en laine, vapeur qui s'élève"
+    },
+    {
+      "id": "pique-nique",
+      "cat": "lifestyle",
+      "desc": "pique-nique dans l'herbe, nappe vichy, panier en osier, lumière d'été"
+    },
+    {
+      "id": "terrasse-med",
+      "cat": "lifestyle",
+      "desc": "terrasse méditerranéenne, mur blanchi à la chaux, bougainvilliers, ombres de feuillage"
+    },
+    {
+      "id": "atelier-argile",
+      "cat": "atelier",
+      "desc": "établi de céramiste, argile crue, outils de tournage, poussière de terre, lumière latérale chaude"
+    },
+    {
+      "id": "atelier-mains",
+      "cat": "atelier",
+      "desc": "mains de l'artisane tenant délicatement la pièce, tablier en lin, atelier flou derrière"
+    },
+    {
+      "id": "atelier-etagere",
+      "cat": "atelier",
+      "desc": "étagère en bois de l'atelier avec d'autres pièces floues en arrière-plan, la pièce au premier plan"
+    },
+    {
+      "id": "wabi-sabi",
+      "cat": "editorial",
+      "desc": "minimalisme japonais wabi-sabi, pierre brute, branche sèche, natte, beaucoup d'espace vide"
+    },
+    {
+      "id": "scandinave",
+      "cat": "editorial",
+      "desc": "intérieur scandinave, chêne clair, mur blanc, rayon de soleil d'hiver"
+    },
+    {
+      "id": "moody-clair-obscur",
+      "cat": "editorial",
+      "desc": "nature morte façon peinture flamande, fond sombre, clair-obscur, fruits et drapé"
+    },
+    {
+      "id": "marbre-luxe",
+      "cat": "editorial",
+      "desc": "comptoir en marbre veiné, accents laiton, lumière douce de galerie"
+    },
+    {
+      "id": "terracotta",
+      "cat": "editorial",
+      "desc": "mur et sol en terre cuite, soleil couchant, ombres longues"
+    },
+    {
+      "id": "beton-brut",
+      "cat": "editorial",
+      "desc": "béton ciré et lignes architecturales, lumière zénithale, composition graphique"
+    },
+    {
+      "id": "flatlay",
+      "cat": "graphique",
+      "desc": "vue de dessus à plat (flat lay), pièce entourée d'éléments assortis disposés de façon géométrique sur fond coloré"
+    },
+    {
+      "id": "levitation",
+      "cat": "graphique",
+      "desc": "la pièce en légère lévitation au-dessus de son ombre, fond uni, éléments du décor en suspension (fruits, fleurs, gouttes)"
+    },
+    {
+      "id": "macro-texture",
+      "cat": "graphique",
+      "desc": "gros plan macro sur l'émail et le geste peint, profondeur de champ très faible, pièce entière visible mais cadrée serré"
+    },
+    {
+      "id": "noel",
+      "cat": "saison",
+      "months": [
+        11,
+        12
+      ],
+      "desc": "table de Noël, branches de sapin, guirlande lumineuse floue, papier kraft et ficelle"
+    },
+    {
+      "id": "automne",
+      "cat": "saison",
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "desc": "feuilles mortes rousses, courges, plaid, lumière dorée d'automne"
+    },
+    {
+      "id": "printemps",
+      "cat": "saison",
+      "months": [
+        3,
+        4,
+        5
+      ],
+      "desc": "branches en fleurs de cerisier, lumière fraîche, tons pastel"
+    },
+    {
+      "id": "ete",
+      "cat": "saison",
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "desc": "citrons, glaçons, lumière de plein soleil, ombres nettes de vacances"
+    },
+    {
+      "id": "hiver-neige",
+      "cat": "saison",
+      "months": [
+        12,
+        1,
+        2
+      ],
+      "desc": "rebord de fenêtre givré, neige dehors, boisson chaude fumante"
+    }
   ],
   "angles": [
     "vue de face à hauteur de la pièce",
