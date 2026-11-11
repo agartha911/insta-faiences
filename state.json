@@ -109,6 +109,20 @@
       "manual": true,
       "media_id": "17873931924644480",
       "fb_post_id": "316950471498948_122241624794312357"
+    },
+    {
+      "date": "2026-11-11",
+      "slug": "bol-saturnin-f43c",
+      "name": "Assiette creuse Saturnin",
+      "file": "posts/2026-11-11-bol-saturnin-f43c.jpg",
+      "concept": "champ-fleurs",
+      "cat": "nature",
+      "scene": "Muret en pierre devant un champ de fleurs sauvages flou, tout en nuances rose poudré et ivoire crème à la lumière dorée de fin de journée ; le fond et les accessoires restent dans ces tons. Au premier plan, de petites plumes et de minuscules œufs décoratifs en céramique rose pâle (avec quelques micro‑points noirs discrets) reprennent les motifs du bec et des yeux de Saturnin, éparpillés autour de la pièce pour une composition vivante et ton sur ton.",
+      "angle": "contre-plongée légère, la pièce dominant le cadre",
+      "light": "lumière de studio en clair-obscur",
+      "published": false,
+      "manual": true,
+      "test": true
     }
   ]
 }
