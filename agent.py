@@ -489,6 +489,22 @@ def main(stage):
             if any(h["date"] == today and h.get("published") and not h.get("manual") for h in state["history"]):
                 log("déjà publié aujourd'hui")
                 return
+        # "publier le test" : si un test a été fait aujourd'hui, on publie CETTE image telle quelle
+        last = state["history"][-1] if state["history"] else {}
+        if FORCE and not DRY and last.get("date") == today and last.get("test") and not last.get("published"):
+            last.pop("test", None)
+            last["manual"] = True
+            if QUEUE.exists():   # retire la pièce de la liste si elle y est en 1re position
+                lines = QUEUE.read_text(encoding="utf-8").splitlines()
+                for i, l in enumerate(lines):
+                    if l.strip() and not l.strip().startswith("#"):
+                        if (match_product(l.partition("|")[0], products()) or {}).get("slug") == last["slug"]:
+                            lines.pop(i)
+                            QUEUE.write_text("\n".join(lines) + "\n", encoding="utf-8")
+                        break
+            save_state(state)
+            log("publication de l'image du test:", last["file"])
+            return
         items = products()
         p = pick_product(items, state)
         ad = art_direction(p, state)
