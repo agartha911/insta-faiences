@@ -223,11 +223,54 @@ def art_direction(p, state):
     # légère préférence pour les décors assortis à la pièce et les saisons
     weights = [3 if c["cat"] in ("assorti", "saison") else 1 for c in ok]
     concept = random.choices(ok, weights=weights)[0]
+    p["_candidates"] = ok
     angle = random.choice([a for a in STYLES["angles"] if a != last.get("angle")])
     light = random.choice([l for l in STYLES["lights"] if l != last.get("light")])
     if concept["id"] == "flatlay":
         angle = "vue de dessus à la verticale"
     return {"concept": concept["id"], "cat": concept["cat"], "scene": concept["desc"], "angle": angle, "light": light}
+
+
+def ai_art_direction(p, ad, img_png):
+    """Regarde la vraie photo de la pièce et choisit, parmi les décors autorisés,
+    celui qui va avec ses couleurs et ses motifs, puis l'adapte à la pièce."""
+    cands = p.get("_candidates") or []
+    if not os.getenv("OPENAI_API_KEY") or not cands:
+        return ad
+    lst = "\n".join(f"- {c['id']} : {c['desc']}" for c in cands)
+    instr = f"""Tu es directeur artistique pour une céramiste artisanale. Voici la photo de la pièce « {p['name']} ».
+1. Décris précisément la pièce (forme, couleur d'émail, motifs peints et leurs couleurs) en 1 phrase.
+2. Donne sa palette (3 à 4 couleurs).
+3. Choisis dans la liste ci-dessous LE décor qui met le mieux en valeur CETTE pièce : couleurs en harmonie ou complémentaires, ambiance cohérente avec ses motifs (ex. fleurs roses -> univers floral, doux, romantique ; bleu profond -> eau, minéral, nordique). Écarte tout décor sans rapport avec la pièce.
+4. Réécris ce décor en 1 à 2 phrases, adapté à la pièce (accessoires, fleurs, fruits ou matières dans ses couleurs).
+Décors autorisés :
+{lst}
+Réponds uniquement en JSON : {{"look": "...", "palette": "...", "id": "...", "scene": "..."}}"""
+    try:
+        b64 = base64.b64encode(img_png).decode()
+        r = requests.post(f"{OA}/responses", headers=openai_headers(), timeout=120, json={
+            "model": TEXT_MODEL,
+            "input": [{"role": "user", "content": [
+                {"type": "input_text", "text": instr},
+                {"type": "input_image", "image_url": f"data:image/png;base64,{b64}"}]}]})
+        r.raise_for_status()
+        j = r.json()
+        txt = j.get("output_text") or "".join(
+            c.get("text", "") for o in j.get("output", []) for c in o.get("content", []) or [] if c.get("type") == "output_text")
+        data = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
+        chosen = next((c for c in cands if c["id"] == data.get("id")), None)
+        if chosen:
+            ad.update(concept=chosen["id"], cat=chosen["cat"])
+        if data.get("scene"):
+            ad["scene"] = data["scene"]
+        if data.get("look"):
+            p["look"] = data["look"]
+        if data.get("palette"):
+            p["palette"] = data["palette"]
+        log("direction artistique IA:", ad["concept"], "|", ad["scene"][:120])
+    except Exception as e:  # noqa
+        log("direction artistique IA indisponible, décor tiré au hasard:", e)
+    return ad
 
 
 def image_prompt(p, ad):
@@ -447,15 +490,19 @@ def main(stage):
         items = products()
         p = pick_product(items, state)
         ad = art_direction(p, state)
+        img = fetch_image(p)
         if p.get("_decor"):
             ad.update(concept="perso", cat="perso", scene=p["_decor"])
+        else:
+            ad = ai_art_direction(p, ad, img)
+        p.pop("_candidates", None)
         log("pièce:", p["name"], "|", ad["concept"], "|", ad["angle"], "|", ad["light"])
         prompt = image_prompt(p, ad)
         if os.getenv("OPENAI_API_KEY"):
-            raw = generate_image(fetch_image(p), prompt)
+            raw = generate_image(img, prompt)
         else:
             log("pas de clé OpenAI : image produit brute (test)")
-            raw = fetch_image(p)
+            raw = img
         n = len(state["history"])
         final = finish_image(raw, signature=(n % 4 == 3))
         POSTS.mkdir(exist_ok=True)
