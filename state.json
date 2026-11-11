@@ -100,14 +100,13 @@
       "slug": "assiette-creuse-charlotte",
       "name": "Assiette creuse Charlotte",
       "file": "posts/2026-11-11-assiette-creuse-charlotte.jpg",
-      "concept": "champ-fleurs",
-      "cat": "nature",
-      "scene": "Muret en pierre devant un champ de fleurs sauvages flou, entièrement décliné en nuances de rose (rose poudré du muret à rose plus soutenu des fleurs) et touches de rouge, lumière dorée de fin de journée; de petites fleurs réelles roses et rouges, disposées au sol et sur le muret, reprennent exactement les motifs floraux de l'assiette tandis que des boutons verts ponctuent la scène comme les cœurs peints.",
-      "angle": "vue de dessus à la verticale",
-      "light": "lumière naturelle douce d'une fenêtre latérale",
+      "concept": "studio-couleur",
+      "cat": "studio",
+      "scene": "Fond studio papier rose poudré (nuance un peu plus claire que la pièce) avec une ombre portée nette et graphique; autour de l'assiette, pétales et petites fleurs éparpillés aux mêmes rouges et verts que le décor, rappelant fidèlement le motif floral de la pièce.",
+      "angle": "cadrage serré décentré selon la règle des tiers",
+      "light": "lumière dure de midi, ombres nettes et graphiques",
       "published": false,
-      "manual": true,
-      "test": true
+      "manual": true
     }
   ]
 }
