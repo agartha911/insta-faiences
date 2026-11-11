@@ -94,6 +94,20 @@
       "manual": true,
       "media_id": "18110569478258650",
       "fb_post_id": "316950471498948_122241623642312357"
+    },
+    {
+      "date": "2026-11-11",
+      "slug": "assiette-creuse-charlotte",
+      "name": "Assiette creuse Charlotte",
+      "file": "posts/2026-11-11-assiette-creuse-charlotte.jpg",
+      "concept": "champ-fleurs",
+      "cat": "nature",
+      "scene": "Muret en pierre devant un champ de fleurs sauvages flou, entièrement décliné en nuances de rose (rose poudré du muret à rose plus soutenu des fleurs) et touches de rouge, lumière dorée de fin de journée; de petites fleurs réelles roses et rouges, disposées au sol et sur le muret, reprennent exactement les motifs floraux de l'assiette tandis que des boutons verts ponctuent la scène comme les cœurs peints.",
+      "angle": "vue de dessus à la verticale",
+      "light": "lumière naturelle douce d'une fenêtre latérale",
+      "published": false,
+      "manual": true,
+      "test": true
     }
   ]
 }
