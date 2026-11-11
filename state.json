@@ -105,8 +105,10 @@
       "scene": "Fond studio papier rose poudré (nuance un peu plus claire que la pièce) avec une ombre portée nette et graphique; autour de l'assiette, pétales et petites fleurs éparpillés aux mêmes rouges et verts que le décor, rappelant fidèlement le motif floral de la pièce.",
       "angle": "cadrage serré décentré selon la règle des tiers",
       "light": "lumière dure de midi, ombres nettes et graphiques",
-      "published": false,
-      "manual": true
+      "published": true,
+      "manual": true,
+      "media_id": "17873931924644480",
+      "fb_post_id": "316950471498948_122241624794312357"
     }
   ]
 }
