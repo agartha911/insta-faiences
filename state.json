@@ -137,6 +137,18 @@
       "published": true,
       "media_id": "18434578627148313",
       "fb_post_id": "316950471498948_122241728174312357"
+    },
+    {
+      "date": "2026-11-13",
+      "slug": "fleur-bleu-mouchete-et-blanc",
+      "name": "Fleur en céramique Bleu Moucheté Et Blanc",
+      "file": "posts/2026-11-13-fleur-bleu-mouchete-et-blanc.jpg",
+      "concept": "eau-lac",
+      "cat": "nature",
+      "scene": "Pierre plate au bord d’un lac calme au petit matin, tons bleus déclinés du gris-bleu du rocher aux reflets azur de l’eau et brume légère; de petites fleurs bleues réelles sont posées ou flottent autour de la pièce, de minuscules graviers bleu foncé rappellent les mouchetures de l’émail et de délicates gouttes rose pâle sur les pétales renvoient aux centres rosés de la céramique.",
+      "angle": "vue de dessus à la verticale",
+      "light": "lumière diffuse de ciel couvert",
+      "published": false
     }
   ]
 }
