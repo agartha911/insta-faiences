@@ -188,7 +188,8 @@
       "scene": "Mise en scène automnale ton sur ton : table rustique parsemée de feuilles mortes rousses et de petites courges orangées, avec des pétales et de petites fleurs réelles orange identiques aux corolles en céramique disséminés autour de la pièce, baignée d’une lumière dorée d’automne.",
       "angle": "vue de face à hauteur de la pièce",
       "light": "lumière de studio en clair-obscur",
-      "published": false
+      "published": true,
+      "media_id": "18639027751041608"
     }
   ]
 }
