@@ -203,6 +203,19 @@
       "light": "soleil doré de fin de journée, ombres longues",
       "published": true,
       "media_id": "18122501539765302"
+    },
+    {
+      "date": "2026-11-18",
+      "slug": "bol-charlotte-",
+      "name": "Bol Charlotte",
+      "file": "posts/2026-11-18-bol-charlotte.jpg",
+      "concept": "marbre-luxe",
+      "cat": "editorial",
+      "scene": "Comptoir en marbre veiné rose clair et accents laiton, lumière douce de galerie ; autour du bol, vraies petites fleurs rouges à cinq pétales avec leur cœur vert et quelques pétales rosés éparpillés pour rappeler le décor peint.",
+      "angle": "vue de dessus à la verticale",
+      "light": "contre-jour lumineux avec halo sur les bords de la pièce",
+      "published": false,
+      "manual": true
     }
   ]
 }
