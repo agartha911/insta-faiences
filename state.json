@@ -214,8 +214,9 @@
       "scene": "Comptoir en marbre veiné rose clair et accents laiton, lumière douce de galerie ; autour du bol, vraies petites fleurs rouges à cinq pétales avec leur cœur vert et quelques pétales rosés éparpillés pour rappeler le décor peint.",
       "angle": "vue de dessus à la verticale",
       "light": "contre-jour lumineux avec halo sur les bords de la pièce",
-      "published": false,
-      "manual": true
+      "published": true,
+      "manual": true,
+      "media_id": "18130623634641210"
     }
   ]
 }
