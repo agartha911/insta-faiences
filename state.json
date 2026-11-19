@@ -217,6 +217,18 @@
       "published": true,
       "manual": true,
       "media_id": "18130623634641210"
+    },
+    {
+      "date": "2026-11-19",
+      "slug": "fleur-rose1",
+      "name": "Fleur en céramique Rose",
+      "file": "posts/2026-11-19-fleur-rose1.jpg",
+      "concept": "levitation",
+      "cat": "graphique",
+      "scene": "Fond rose poudré sur un plan de travail en bois, petit-déjeuner disposé en nuances ton sur ton — serviette et petite assiette rose pâle, tranches de pamplemousse rose et quelques framboises — avec vraies petites fleurs et pétales roses éparpillés autour qui reprennent la forme des pétales en céramique et des touches rouge cerise au centre.",
+      "angle": "vue de trois-quarts légèrement plongeante",
+      "light": "lumière naturelle douce d'une fenêtre latérale",
+      "published": false
     }
   ]
 }
