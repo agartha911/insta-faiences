@@ -230,6 +230,18 @@
       "light": "lumière naturelle douce d'une fenêtre latérale",
       "published": true,
       "media_id": "18123618067991073"
+    },
+    {
+      "date": "2026-11-20",
+      "slug": "gamelle-chat-arlo",
+      "name": "Gamelle chat Arlo",
+      "file": "posts/2026-11-20-gamelle-chat-arlo.jpg",
+      "concept": "atelier-argile",
+      "cat": "atelier",
+      "scene": "Établi d'atelier en bois clair taché d'argile taupe, outils et morceaux d'argile crue disposés autour, lumière latérale chaude ; petits jetons en argile en forme de patte et empreintes fraîches disposés près de la gamelle, chiffons en lin beige et poussière de terre dans des nuances greige pour reprendre ton sur ton le motif de la patte.",
+      "angle": "vue de dessus à la verticale",
+      "light": "lumière dure de midi, ombres nettes et graphiques",
+      "published": false
     }
   ]
 }
