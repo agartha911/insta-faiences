@@ -243,6 +243,18 @@
       "light": "lumière dure de midi, ombres nettes et graphiques",
       "published": true,
       "media_id": "18400213606161811"
+    },
+    {
+      "date": "2026-11-21",
+      "slug": "assiette-creuse-tulipe",
+      "name": "Assiette creuse Tulipe",
+      "file": "posts/2026-11-21-assiette-creuse-tulipe.jpg",
+      "concept": "terrasse-med",
+      "cat": "lifestyle",
+      "scene": "Terrasse méditerranéenne en ton sur ton rose/rouge : mur blanchi délicatement teinté rose poudré, bougainvilliers et coussins dans des nuances de rouge et rose. Autour de l'assiette, petits pots et bouquets de vraies tulipes rouges reprenant le motif peint, feuilles vertes et ombres de feuillage pour une scène riche et vivante.",
+      "angle": "vue plongeante à 45°",
+      "light": "lumière diffuse de ciel couvert",
+      "published": false
     }
   ]
 }
