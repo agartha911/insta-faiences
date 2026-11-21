@@ -254,7 +254,8 @@
       "scene": "Terrasse méditerranéenne en ton sur ton rose/rouge : mur blanchi délicatement teinté rose poudré, bougainvilliers et coussins dans des nuances de rouge et rose. Autour de l'assiette, petits pots et bouquets de vraies tulipes rouges reprenant le motif peint, feuilles vertes et ombres de feuillage pour une scène riche et vivante.",
       "angle": "vue plongeante à 45°",
       "light": "lumière diffuse de ciel couvert",
-      "published": false
+      "published": true,
+      "media_id": "18038638778904489"
     }
   ]
 }
