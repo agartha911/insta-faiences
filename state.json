@@ -256,6 +256,18 @@
       "light": "lumière diffuse de ciel couvert",
       "published": true,
       "media_id": "18038638778904489"
+    },
+    {
+      "date": "2026-11-22",
+      "slug": "fleurs-en-ceramique-vert-pastel",
+      "name": "Fleur en céramique Vert Pastel",
+      "file": "posts/2026-11-22-fleurs-en-ceramique-vert-pastel.jpg",
+      "concept": "jardin-pluie",
+      "cat": "nature",
+      "scene": "Mise en scène ton sur ton vert pastel : petite table de jardin en fer peint vert menthe mouillée après la pluie, gouttes perlantes sur le métal et sur l'émail des fleurs, avec en arrière-plan une verdure floue et un tapis de petites fleurs et pétales vert tendre éparpillés — quelques perles rosées rappelant les cœurs céramiques viennent ponctuer la composition.",
+      "angle": "vue de dessus à la verticale",
+      "light": "lumière de studio en clair-obscur",
+      "published": false
     }
   ]
 }
