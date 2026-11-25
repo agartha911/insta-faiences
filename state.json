@@ -295,6 +295,18 @@
       "light": "lumière diffuse de ciel couvert",
       "published": true,
       "media_id": "17911463703328943"
+    },
+    {
+      "date": "2026-11-25",
+      "slug": "tasse-perle-mentholee",
+      "name": "Tasse Perle Mentholée",
+      "file": "posts/2026-11-25-tasse-perle-mentholee.jpg",
+      "concept": "cuisine-matin",
+      "cat": "lifestyle",
+      "scene": "Plan de travail en bois clair baigné de lumière du matin, pommes vertes, tranches de kiwi et petits rameaux d'herbes disposés autour de la tasse ; bâtons de céleri et haricots verts posés verticalement pour reprendre visuellement les cannelures de la panse, le tout en nuances menthe et aqua ton sur ton.",
+      "angle": "vue de face à hauteur de la pièce",
+      "light": "contre-jour lumineux avec halo sur les bords de la pièce",
+      "published": false
     }
   ]
 }
