@@ -308,6 +308,18 @@
       "light": "contre-jour lumineux avec halo sur les bords de la pièce",
       "published": true,
       "media_id": "18136432870765319"
+    },
+    {
+      "date": "2026-11-26",
+      "slug": "fleur-tulipe",
+      "name": "Fleur en céramique Tulipe",
+      "file": "posts/2026-11-26-fleur-tulipe.jpg",
+      "concept": "moody-clair-obscur",
+      "cat": "editorial",
+      "scene": "Nature morte façon peinture flamande en tonalités bordeaux : fond profond et drapé velouté grenat, lumière latérale dramatisée en clair-obscur; autour de la pièce, tulipes fraîches et pétales rouges éparpillés, quelques fruits rouges (cerises, grenade) et un voile de soie sombre reprennent et soulignent les veines et la brillance de l’émail.",
+      "angle": "vue plongeante à 45°",
+      "light": "soleil doré de fin de journée, ombres longues",
+      "published": false
     }
   ]
 }
